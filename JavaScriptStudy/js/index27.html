@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function checkCookie(){
+				username=getCookie('username');
+				console.log("username:"+username)
+				if(username!=null&&username!=""){
+					alert("welcome again"+username);
+				}else{
+					username=prompt("please enter your name","");
+					if(username!=null&&username!=""){
+						setCookie('username',username,365);
+					}
+				}
+			}
+			
+			function setCookie(name,value,expiredate){
+				var exdate = new Date();
+				exdate.setDate(exdate.getDate() + expiredate);
+				document.cookie=name+"="+escape(value)+
+				((expiredate==null)?"":";expires="+exdate.toGMTString());
+			}
+			
+			function getCookie(username){
+				console.log(document.cookie)
+				if (document.cookie.length > 0) {
+					start = document.cookie.indexOf(username+"=");
+					console.log("start: "+start)
+					if(start!=-1){
+						start=start+username+1;
+						end = document.cookie.indexOf(";",start);
+						if (end==-1){
+							end = document.cookie.length;
+						}
+					return unescape(document.cookie.substring(start,end));
+					}
+				}
+				return "";
+			}
+			
+//			function clearCookie(name){
+//				var date = new Date();
+//				date.setTime(date.getDate()-1)
+//				var username = getCookie(name);
+//				if (username!=null){
+//					document.cookie=name+"="+username+";expires="+date.toGMTString();
+//				}
+//			}
+		</script>
+	</head>
+	<body onload="checkCookie()">
+		<!--<button onclick="clearCookie()">清除cookie</button>-->
+	</body>
+</html>

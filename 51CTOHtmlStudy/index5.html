@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#lside{
+				width: 200px;
+				height: 200px;
+				background-color: green;
+			}
+			#rside{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				float: left;
+			}
+			#parent{
+				background-color: orange;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="parent">
+			<div id="lside">左边</div>
+			<div id="rside">右边</div>
+		</div>
+	</body>
+</html>
+
+
+	<!--
+	如果父div中有两个子div是浮动的，父div的高度，有没有被子div撑起来
+	答：没有，如果两个子div都浮动，那么父div的宽度为body的宽度，高度为0
+	因为当子div浮动以后，就脱离了正常的文档流，不受div的控制了。
+-->
+	

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML DOM</title>
+		<script type="text/javascript" >
+			var x = document.getElementById("demo");
+			//这样写x是空的，因为div标签此时还没有创建
+			var y = x.getElementsByTagName("p");
+//			alert(y);//[object HTMLCollection]
+			document.write("div中的第一个p标签内的文字是："+y[0].innerHTML);//Hello World
+		</script>
+	</head>
+	<body>
+		<div id="demo">
+			<p>Hello World</p>
+			<p>通过tag查找元素</p>
+		</div>
+	</body>
+</html>
+<!--
+	其次，不能将需要访问dom元素的js放在body之前，
+	因为此时还没有开始生成dom，所以在body之前的访问dom元素的js会出错，或者无效。
+	
+-->
+	
+	<!--
+		绝不要使用在文档加载之后使用 document.write()。这会覆盖该文档
+		
+	-->

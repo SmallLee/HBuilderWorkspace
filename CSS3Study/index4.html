@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>伪元素选择器</title>
+		<style type="text/css">
+			p:first-line{
+				color: red;
+			}
+			p:first-letter{
+				font-size: 28px;
+			}
+			P:after{
+				color: orange;
+				content:"我是p后面的文字";
+			}
+			P:before{
+				color:blue;
+				content:"我是p前面的文字";
+		</style>
+	</head>
+	<body>
+		<p>
+			我们所说的这个first-line，这个选择器是需要向某个元素中的第一行文字使用样式。因为这个br它是换行，也就是说我们使用first-line的话它会，
+			对我们第一行文字进行一个样式，我们来看一下对不对
+		</p>
+	</body>
+</html>
+
+<!--
+	四个伪元素选择器：
+	1.first-line 定义第一行文字样式
+	2.first-letter:定义第一个字母的样式
+	3.after 向后面添加
+ 	4.before
+	
+	选择器：伪元素{属性：值}
+与类配合使用
+选择器.类名：伪元素{属性：值}
+-->
+	
+	

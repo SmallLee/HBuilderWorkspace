@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="angular.min.js"></script>
+		<style type="text/css">
+			input.ng-invalid{
+				background: lightblue;
+			}
+		</style>
+	</head>
+	<body id="bd">
+		<form ng-app="myApp">
+			<input name="myEmail" ng-model="text" required/>
+		</form>
+	</body>
+	<script type="text/javascript">
+		angular.element(document).ready(function(){
+			angular.bootstrap(document.getElementById("bd"),["myApp"]);
+		});
+//		angular.bootstrap(document.getElementById("bd"),['myApp']);
+//		angular.bootstrap(document,['myApp']);
+	</script>
+</html>
+
+<!--
+	ng-app如果指定了值，那么就必须定义一个module，否则angular程序无法启动
+	angular程序启动的两种方式：
+	1.给元素添加属性ng-app,如果指定了属性名字，则需要创建对应的module
+	2.不指定ng-app，通过JS代码执行，angular.bootstrap
+-->

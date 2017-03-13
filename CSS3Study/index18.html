@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>valid选择器</title>
+		<style type="text/css">
+			input[type='email']:invalid{
+				color: red;
+			}
+			input[type='email']:valid{
+				color: green;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="email" placeholder="请输入邮箱"/>
+	</body>
+</html>

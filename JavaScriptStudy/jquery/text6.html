@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				//下滑
+				$("#d1").click(function(){
+					$("#pannel").slideDown();
+				});
+				//上滑
+					$("#d2").click(function(){
+						$("#pannel").slideUp();
+					})
+			});
+		</script>
+		<style type="text/css">
+			#pannel,#d1,#d2{
+				padding: 5px;
+				text-align: center;
+				background-color: #9e9e9e;
+				border: 2px red solid;
+			}
+			#pannel{
+				padding: 50px;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>滑动</h1>
+		<div id="d1">点我下滑面板</div>
+		<div id="pannel">Hello World</div>
+		<div id="d2">点我上滑面板</div>
+			
+	</body>
+</html>
+
+<!--
+	1.选择器分组
+	你可以对选择器进行分组，这样，被分组的选择器就可以分享相同的声明。用逗号将需要分组的选择器分开。
+	2.display:none;隐藏元素
+	
+-->

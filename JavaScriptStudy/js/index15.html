@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DOM 事件</title>
+		<script type="text/javascript">
+			//点击改变文字
+//			function changetext(id){
+//				id.innerHTML="我被点击了";
+//			}
+			function checkcookies(){
+				if (navigator.cookieEnabled){
+					alert("已启用cookie");
+				} else {
+					alert("未启用cookie");
+				}
+			}
+			function exit(){
+				console.log("离开页面")
+			}
+			
+			function toUpperCase(){
+				var x = document.getElementById("letter");
+				x.value = x.value.toUpperCase()
+			}
+			
+			function mouseover(div){
+				div.innerHTML="鼠标在我上面";
+			}
+			
+			function mouseout(div){
+				div.innerHTML="鼠标离开";
+			}
+		</script>
+	</head>
+	<!--<body onload="checkcookies()" onunload="exit()">
+		<!--<h1 onclick="changetext(this)">鼠标点击我</h1>-->
+	<!--</body>-->
+	<body>
+		请输入字母：<input type="text" id="letter" onchange="toUpperCase()"/>
+		
+		<div id="d1" onmouseover="mouseover(this)" onmouseout="mouseout(this)">
+			我是div
+		</div>
+	</body>
+</html>
+
+<!--
+	HTML DOM事件：
+	1.onClick：点击事件
+	2.onload：页面加载事件，onunload:页面离开，事件可用于检测访问者的浏览器类型和浏览器版本，
+	并基于这些信息来加载网页的正确版本，onload 和 onunload 事件可用于处理 cookie。
+	3.onchange:当改变输入字段的内容时，会触发
+	4.onmouseover:鼠标放上去 onmouseout:鼠标离开
+	5.onfocus:获取焦点时触发
+-->

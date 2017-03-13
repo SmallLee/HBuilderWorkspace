@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>对象的结构</h1>
+		<script type="text/javascript">
+			function Test(){
+				
+			}
+			Test.prototype.z = 10;
+			var obj = new Test();
+			obj.y = 1;
+			console.log(obj.y);
+			console.log(obj.z);
+			console.log(obj.toString);//function toString()
+			console.log(obj.toString());//[object Object]
+			//检查某个对象是否有属性，用in
+//			console.log("y" in obj);//true
+//			console.log("z" in obj);//继承来的z，也是true
+//			console.log("toString" in obj)
+			//只检测自己的，不检测继承下来的
+			console.log(obj.hasOwnProperty("y"));
+			console.log(obj.hasOwnProperty("z"));//false
+			//create方法，用指定的原型创建一个对象
+			var obj = Object.create({x:1});
+			console.log("x" in obj);//true,x是继承下来的
+			console.log(obj.hasOwnProperty("x"));//false
+			
+//			Object.create(null);不继承任何属性的对象
+		</script>
+	</body>
+</html>
+
+<!--
+	hasOwnProperty:只检测自己的属性
+	
+-->

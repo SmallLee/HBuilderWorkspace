@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div1" style="background: #abcdef;width: 300px;height: 300px;">
+			<input type="button" id="btn1" value="test1"/>
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		var btn1 = document.getElementById("btn1");
+		var div1 = document.getElementById("div1");
+		btn1.onclick = function(){
+			alert('btn click');
+			//w3c
+			e.stopPropagation;
+			//ie
+//			e.cancelBubble = true;
+		}
+		div1.onclick = function(){
+			alert('div click')
+		}
+		//document.body代表body标签
+		document.body.onclick = function(){
+			alert('body click')
+		}
+		//document.documentElement代表文档的根节点
+		document.documentElement.onclick = function(){
+			alert('html click');
+		}
+		document.onclick = function(){
+			alert('document click');
+		}
+	</script>
+</html>

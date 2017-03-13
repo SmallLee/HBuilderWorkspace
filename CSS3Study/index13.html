@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>UI选择器</title>
+		<style type="text/css">
+			/*鼠标悬浮时触发*/
+			input[type='text']:hover{
+				background: pink;
+			}
+			/*获得焦点时触发*/
+			input[type='text']:focus{
+				color: red;
+				background: green;
+			}
+			/*鼠标按下时触发*/
+			input[type='password']:active{
+				background: blue;
+			}
+		</style>
+	</head>
+	<body>
+		姓名：<input type="text" /><br/>
+		密码：<input type="password"/>
+	</body>
+</html>

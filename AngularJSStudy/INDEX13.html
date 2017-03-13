@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="angular.min.js" ></script>
+	</head>
+	<body>
+		Email:
+		<form ng-app="" name='myForm' ng-init="myText='aa@qq.com'">
+			<input type="email" name="myEmail" ng-model="text" required/><br/>
+		<h1>状态</h1>
+		<p>Valid:{{myForm.myEmail.$valid}}(输入的值是否有效)</p>
+		<p>Dirty:{{myForm.myEmail.$dirty}}(是否发生了改变)</p>
+		<p>Touched:{{myForm.myEmail.$touched}}(如果通过触屏点击则为true)</p>
+		</form>
+	</body>
+</html>
+
+<!--
+	ng-model 指令可以为应用数据提供状态值(invalid, dirty, touched, error):
+-->

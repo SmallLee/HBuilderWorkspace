@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>IE浏览器兼容</title>
+		<style type="text/css">
+			/*div{
+				width: 100px;
+				float: left;
+				height: 100px;
+				border: 1px solid rgba(100%,0%,0%,1);
+				margin-left: 50px;
+			}*/
+			#parent{
+				font-size: 10px;
+			}
+			#d1{
+				font-size: 20px;
+			}
+			#d2{
+				font-size: 2em;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="parent">
+			<div id="d1">
+				我是px表示的大小
+			</div>
+			<div id="d2">
+				我是em表示的大小
+			</div>
+		</div>
+	</body>
+</html>
+
+<!--
+	CSSbug:
+	1.没有使用争取的doctype
+	2.各浏览器对不同标签的褚世志不同
+	3.自身书写不规范引起
+	4.浏览器bug引起
+	
+	IEbug:
+	左浮元素，左边距是两倍   _display:inline 加下划线只有ie识别
+	不认识a:link       不加link
+	3像素bug            两个div都浮动
+	
+	颜色表示：
+	bgcolor=red 等价于下面的
+	bgcolor=#ff0000
+	bgcolor=rgb(255,0,0)
+	bgcolor=rgb(100%,0%,0%)
+	透明度
+	bgcolor=rgba(255,0,0,0.1).最后一个参数代表透明度，范围为0-1
+	
+	尺寸表示：
+	像素表示
+	用百分比表示，表示相对于父元素
+	em是父元素的font-size大小，
+-->

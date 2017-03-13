@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>正则表达式</h1>
+		<script type="text/javascript">
+//			var patt = new RegExp("javascript");
+//			console.log(patt.test("the javascript is easy to stydy"));//true
+//			patt = /javascript/;
+//			console.log(patt.test("this is javascript"));//true
+			
+//			var res = /[abc]/.test("blue");//是否包含abc中的任意一个字母
+//			res = /[^abc]/.test("hs");//true,不包含abc
+//			res = /[0-9]/.test("acv");//是否包含数字
+//			res = /[a-z]/.test("123");//是否包含数字
+//			res = /php|java|android/.test('php');  //是否包含其中一个
+//			
+//			//元字符
+//			res = /./.test("\n");//.代表匹配除换行符之外的任意字符
+//			res = /\w/.test("hello world");//[a-zA-Z0-9]
+//			console.log(res)
+//			res = /is/g.exec("this is test");
+//			console.log(res)
+//			console.log(res[0])
+
+//			var str = "this is hello maizi lesson";
+//			var patt = /i/ig;
+//			var myarr;
+//			while((myarr=patt.exec(str))!=null){
+//				var msg = "找到了"+myarr[0]+"!";
+//				msg+="下一个匹配从"+patt.lastIndex+"开始";
+//				console.log(msg)
+//			}
+			var res = "";
+			var str = "this is a test";
+			res = str.match(/is/i);
+			res = str.search(/is/ig)
+			res = str.replace(/i/g,"b");
+			
+			str = "Hello Maizi Edu";
+			res = str.replace(/[A-Z]/g,fun);
+			
+			function fun(match){
+				return "king_"+match.toLowerCase();
+			}
+			console.log(res)
+			
+			res = str.split(/s+/);
+			console.log(res);
+			</script>
+	</body>
+</html>

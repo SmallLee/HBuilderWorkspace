@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JavaScript计时</title>
+		<script type="text/javascript">
+			function timMsg(){
+				t = setTimeout("alert('hello')",4000);
+				console.log(t)
+			}
+			
+			function stopMsg(){
+				clearTimeout(t);
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="timMsg()">计时</button>
+		<button onclick="stopMsg()">停止计时</button>
+	</body>
+</html>

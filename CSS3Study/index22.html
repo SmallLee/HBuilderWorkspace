@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			h2:before{
+				content: "你好";
+				font-size: 14px;
+				color: orange;
+				margin-right: 10px;
+			}
+			h2.h:before{
+				content: none;
+			}
+			span.gd:before{
+				content: url(img/gaode.jpg);
+			}
+			span.wx:before{
+				content:url(img/icon_weixin.jpg)
+			}
+			span.qq:before{
+				content:url(img/icon_qq.jpg)
+			}
+		</style>
+	</head>
+	<body>
+		<h2>我是h2标签</h2>
+		<h2 class="h">我是h2标签</h2>
+		<span class="gd">高德</span>
+		<span class="wx">微信</span>
+		<span class="qq">QQ</span>
+	</body>
+</html>
+<!--
+	使用content属性的追加一个none属性值。指定不需要插入
+-->

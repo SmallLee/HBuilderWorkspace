@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML5拖放</title>
+		<style type="text/css">
+		#cun{
+			width: 300px;
+			height: 300px;
+			border: 2px solid #000000;
+			box-shadow: 1px 4px 8px #FF0000;
+		}
+		#tuo{
+			background: #e54d26;
+            width: 300px;
+            height: 300px;
+		}
+	</style>
+	<script type="text/javascript">
+		function allowDrop(ev){
+			ev.preventDefault();
+			ev.dropEffect = "move";
+		}
+		function drag(ev){//拖放过程中
+//			ev.clearData();
+			ev.effectAllowed = "move";
+			ev.dataTransfer.setData('Text',ev.target.id);
+		}
+		function drop(ev){//其他元素被拖放进了本元素之中
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("Text");
+			ev.target.appendChild(document.getElementById(data));
+		}
+	</script>
+	</head>
+	<body>
+		<div id="cun" ondrop="drop(event)" ondragover = "allowDrop(event)"></div>
+		<br/>
+		<img src="../img/gaode.jpg" draggable="true"/ id="tuo" width="250" height="250" ondragstart="drag(event)">
+	</body>
+</html>

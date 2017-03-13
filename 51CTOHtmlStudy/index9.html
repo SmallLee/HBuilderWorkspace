@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>margin重叠现象</title>
+		<style type="text/css">
+			#d1{
+				height: 100px;
+				background-color: blue;
+				margin-bottom: 50px;
+			}
+			#d2{
+				height: 100px;
+				background-color: green;
+				margin-top: 80px;
+			}
+			#parent{
+				width: 200px;
+				height: 50px;
+				background-color: red;
+				margin-top: 40px;
+			}
+			#child{
+				width: 200px;
+				height: 50px;
+				background-color: orange;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d1"></div>
+		<div id="d2"></div>
+		
+		<div id="parent">
+			<div id="child"></div>
+		</div>
+	</body>
+</html>
+<!--
+	上下相邻的普通元素，上下边距，并非简单的相加，而是取较大的值
+	父子div元素也会发生重叠
+-->

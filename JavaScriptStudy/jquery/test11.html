@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../jquery-3.1.1.min.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("button").click(function(){
+					//通过html标签
+					var txt1 = "<p>文本</p>";
+					var txt2 = $("<p></p>").text("文本");
+					var txt3 = document.createElement("p");
+					txt3.innerHTML = "文本";
+					$("body").append(txt1,txt2,txt3);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p>我是p标签</p>
+		<button>添加文本</button>
+	</body>
+</html>
+
+<!--
+	添加元素
+	append
+	prepend
+	after
+	before
+-->

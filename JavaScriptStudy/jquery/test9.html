@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../jquery-3.1.1.min.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#txt").click(function(){
+					alert($("p").text());
+				});
+				$("#html").click(function(){
+					alert($("p").html());
+				});
+				$("#text").click(function(){
+					alert("值为： "+$("input").val());
+				})
+				$("#attr").click(function(){
+					alert($("a").attr("id"))
+					alert($("a").attr("href"))
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<h1>jQuery获取内容和属性</h1>
+		<p>这是段落中的<b>粗体</b>文本</p>
+		<input type="text"/><br/>
+		<button id="txt">显示文本</button>
+		<button id="html">显示HTML</button>
+		<button id="text">获取文本框中的值</button><br/>
+		<a href="www.baidu.com" id="baidu">百度一下</a><br/>
+		<button id="attr">获取属性</button>
+	</body>
+</html>
+
+<!--
+	text：显示文本
+	html:显示html代码
+	
+-->

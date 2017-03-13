@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../jquery-3.1.1.min.js" ></script>
+		<script>
+			$(document).ready(function(){
+				$("#hide").click(function(){
+					$("p").hide(2000,function(){
+						alert('隐藏了')
+					});
+				});
+				$("#show").click(function(){
+					$("p").show();
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<p>我是主内容文本</p>
+		<button id="show">显示</button>
+		<button id="hide">隐藏</button>
+	</body>
+</html>
+
+<!--
+	hide和show控制显示和隐藏
+	hide()方法的可选参数为时间和回调函数
+-->

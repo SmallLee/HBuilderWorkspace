@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../jquery-3.1.1.min.js" ></script>
+		<script>
+			$(document).ready(function(){
+				$("#txt").click(function(){
+					$("p").text("你好吗");
+				});
+				$("#color").click(function(){
+					$("p").css("color","red");
+				});
+				$("#callback").click(function(){
+					$("p").text(function(i,originText){
+						return "旧文本： "+originText+"新文本： "+"Hello World";
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>jQuery设置内容和属性</h1>
+	</body>
+	<p>我是p标签</p>
+	<button id="txt">改变文字内容</button>
+	<button id="color">改变文字颜色</button>
+	<button id="callback">改变文字，带回调函数</button>
+</html>

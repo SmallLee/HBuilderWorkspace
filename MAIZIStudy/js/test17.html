@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>事件</h1>
+		<input type="button" value="test1" id="btn"/>
+		<input type="button" value="test2" id="btn2"/>
+		<input type="button" value="test3" id="btn3"/>
+		<script type="text/javascript">
+		var btn = document.getElementById('btn');
+		var btn2 = document.getElementById('btn2');
+		var btn3 = document.getElementById('btn3');
+		btn.onclick = function(){
+			alert('点击了');
+		};
+		function Test(){
+			alert("点击了2");
+		}
+		btn2.onclick = Test;
+		
+		function eventHandler(){
+			alert('event handler');
+		};
+		btn3.addEventListener("click",eventHandler)
+		</script> 
+	</body>
+</html>
+
+<!--
+	事件模型：
+	1.内联模型
+	2.脚本模型
+	3.DOM2模型
+-->

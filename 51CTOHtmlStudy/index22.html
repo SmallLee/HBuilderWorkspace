@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#d1{
+				width: 200px;
+				height: 200px;
+				background: green;
+			}
+			#p1{
+				margin: 0;
+				padding: 0;
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: relative;
+				top: 20px;
+				left: 10px;
+			}
+			#p2{
+				margin: 0;
+				padding: 0;
+				width: 100px;
+				height: 100px;
+				background: orange;
+				position: absolute;
+				top: 20px;
+				left: 10px;
+				z-index: 1;
+			}
+			#p3{
+				margin: 0;
+				padding: 0;
+				width: 100px;
+				height: 100px;
+				background: purple;
+				position: absolute;
+				top: 30px;
+				left: 30px;
+			}
+			#d2{
+				width: 200px;
+				height: 200px;
+				background: pink;
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d1">
+			<p id="p1">
+				
+			</p>
+		</div>
+		<div id="d2">
+			<p id="p2">
+				
+			</p>
+			<p id="p3">
+				
+			</p>
+		</div>
+	</body>
+</html>
+
+<!--
+	1.相对定位
+		相对自己的父元素移动一定的位置，用top,left等指定
+	2.绝对定位
+		用绝对定位时，要求父元素有postion属性，否则依据父父...body
+		
+		z-index：设定元素的距离父元素的高度
+-->

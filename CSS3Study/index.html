@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>CSS3属性选择器</title>
+		<style type="text/css">
+			[id*=section]{
+				background: green;
+			}
+			[id^=b]{
+				background: pink;
+			}
+			[id$=a]{
+				background: purple;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>属性选择器</h1>
+		<div id="section">section</div>
+		<div id="section-1">section-1</div>
+		<div id="section-1-1">section-1-1</div>
+		<div id="bsection-2">section-2</div>
+		<div id="section-2-1a">section-2-1</div>
+	</body>
+</html>
+<!--
+	CSS3新增3个属性选择器
+	1.[att*=val]属性包含val的
+	2.[att^=val]属性以val开头的
+	3.[att$=val]属性以val结尾的
+	
+-->

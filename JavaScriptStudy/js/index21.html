@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>正则表达式</title>
+		<script type="text/javascript">
+			var patt1 = new RegExp("e","g");//参数g代表检索所有的
+//			document.write(patt1.exec("I am a legal"))//e
+			do{
+				result = patt1.exec("The dog are big boy love");
+				document.write(result);
+			}while(result!=null)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
+<!--
+	正则表达式：test()、exec() 以及 compile()
+	1.test检索字符串中的指定值，存在则返回true
+	2.exec检索字符串中的指定值，存在则返回给定的值，不存在返回null
+	3.compile() 方法用于改变 RegExp。
+-->

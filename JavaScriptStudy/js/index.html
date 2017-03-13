@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>定义按钮改变文字</title>
+		<script>
+		function change(){
+			document.getElementById("demo").innerHTML="你是谁";
+		}
+		</script>
+	</head>
+	<body>
+		<p id="demo">我的第一个</p>
+		<!--两种按钮形式-->
+		<input type="button" value="点击" onclick="change()" />
+		<button type="button"  onclick="change()">按下我</button>
+	</body>
+	
+</html>

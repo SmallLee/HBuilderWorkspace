@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../jquery-3.1.1.min.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("span").parent().css({"border":"1px red solid"});
+			});
+		</script>
+		<style type="text/css">
+			.ancestor *{
+				border: 2px lightgray solid;
+				padding: 5px;
+				margin: 10px;
+				display: block;
+				/*将元素显示为块级元素*/
+			}
+		</style>
+	</head>
+	<body>
+	<div class="ancestor">
+		<div id="d1" style="width: 500px;">
+			<p>p父元素
+				<span>span</span>
+			</p>
+		</div>
+	</div>
+	</body>
+</html>
+
+<!--
+	后代选择器 ：设置某个元素的子元素样式 ，中间是空格
+	现代浏览器，默认字体16px=1em
+	p标签有默认的上下外边距：1em
+	
+	HTML元素分为块级元素和内联元素
+	块级元素：
+	1.块级元素都从新的一行开始
+	2.元素的高度，宽度，内外边距都可以设定
+	3.元素宽度在不设置的情况下，是它本身父容器的100%
+	内联元素：
+	1、和其他元素都在一行上；
+	2、元素的高度、宽度及顶部和底部边距不可设置；
+	3、元素的宽度就是它包含的文字或图片的宽度，不可改变。
+-->

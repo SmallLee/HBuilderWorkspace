@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			input[type='text']:read-only{
+				background: orange;
+			}
+			input[type='text']:read-write{
+				background: blue;
+			}
+			input[type='password']:read-write{
+				background: pink;
+			}
+		</style>
+	</head>
+	<body>
+		姓名：<input type="text" readonly="readonly"/><br/>
+		密码：<input type="password"/>
+	</body>
+</html>
+
+<!--
+	input输入框有两种状态：
+	1.read-only
+	2.read-write
+	
+-->

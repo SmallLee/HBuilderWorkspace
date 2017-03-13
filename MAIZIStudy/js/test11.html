@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//对象的原型指向另外一个对象，本对象的属性继承自它的原型对象，
+			var obj = {x:1};
+			var obj1 = Object.create(obj);
+			console.log(obj.isPrototypeOf(obj1));//true
+			console.log(Object.prototype.isPrototypeOf(obj1));//true
+		</script>
+	</body>
+</html>
+
+
+<!--
+	对象的原型：
+	1.通过对象字面量创建的对象使用Object.prototype作为它们的原型
+	2.通过new创建的对象使用构造函数的prototype属性作为作为他们的原型
+	3.通过Object.create()创建的对象使用第一个参数(也可以是null)作为她们的原型
+	
+-->

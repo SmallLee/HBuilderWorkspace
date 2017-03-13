@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#lside{
+				height: 100px;
+				background: green;
+				width: 100px;
+				float: left;
+			}
+			#rside{
+				width: 100px;
+				height: 100px;
+				background: red;
+				float: left;
+			}
+			#common{
+				width: 100px;
+				height: 100px;
+				background-color: orange;
+				/*不允许上方有左浮动的元素*/
+				clear: left;
+				float: left;
+			}
+			#common2{
+				width: 100px;
+				height: 100px;
+				background-color: grey;
+				/*不允许上方有左浮动的元素*/
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="lside">左边</div>
+		<div id="rside" align="center">右边</div>
+		<div id="common">普通div</div>
+		<div id="common2">普通div2</div>
+	</body>
+</html>
+
+<!--
+	text-align:水平对齐方式  center:左右居中
+	align:规定div中元素水平对齐方式
+	
+	父元素高度确定的单行文本垂直居中：
+	设置height和line-height相等
+	
+	父元素高度确定的单行文本的竖直居中的方法是通过设置父元素的 height 和 line-height 高度一致来实现的。(height: 该元素的高度，line-height: 顾名思义，行高（行间距），指在文本中，行与行之间的 基线间的距离 )。
+
+line-height 与 font-size 的计算值之差，在 CSS 中成为“行间距”。分为两半，分别加到一个文本行内容的顶部和底部。
+-->

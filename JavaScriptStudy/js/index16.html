@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>鼠标点击事件</title>
+	</head>
+	<body>
+		
+		<div id="d1" style="background-color: green;width: 120px;height: 30px;
+			color: white;font-size: 14px;padding: 10px,30px,10px,15px;" onmousedown="mDown(this)"
+			onmouseup="mUp(this)">
+			请按下鼠标
+		</div>
+		<script type="text/javascript">
+			function mDown(obj){
+				obj.innerHTML="请释放鼠标";
+				obj.style.background="blue";
+			}
+			
+		function mUp(obj){
+			obj.style.background="green";
+			obj.innerHTML="请按下鼠标";
+		}
+		</script>
+	</body>
+</html>

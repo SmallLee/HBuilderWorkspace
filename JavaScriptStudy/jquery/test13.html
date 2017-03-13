@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../jquery-3.1.1.min.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("button").click(function(){
+					$("p").addClass("import blue");
+				});
+			});
+		</script>
+		<style type="text/css">
+			.import{
+				font-weight: bold;
+				font-size: xx-large;
+			}
+			.blue{
+				color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>获取并设置css类</h1>
+		<p>我是p标签</p>
+		<button>通过jQuery设置样式</button>
+	</body>
+</html>
+
+<!--
+	addClass:添加样式
+	removeClass:移除样式
+	toggleClass:切换样式
+	
+-->

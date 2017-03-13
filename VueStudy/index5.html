@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.min.js">
+		</script>
+	</head>
+	<body>
+		<div id="app">
+		<pre><a v-bind:href="url">百度一下</a></pre> 
+		</div>
+		<script>
+			new Vue({
+				el:"#app",
+				data:{
+					url:"http://www.baidu.com"
+				}
+			});
+		</script>
+	</body>
+</html>
+<!--
+	Uncaught SyntaxError: Failed to execute 'querySelector' on 'Document': 
+	'3app' is not a valid selector."	
+	/VueStudy/js/vue.min.js (
+	
+	v-bind用于定于html中的属性
+	
+	id不能写在body上
+-->

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="angular.min.js" ></script>
+	</head>
+	<body ng-app="myApp" ng-controller="myCtrl">
+		<p>完善下面的表单</p>
+		名：<input type="text" ng-model="firstname"/><br/>
+		姓：<input type="text"/ ng-model="lastname"><br/>
+		Hello {{firstname+" "+lastname}}
+	</body>
+	<script type="text/javascript">
+		var app = angular.module('myApp',[]);
+		app.controller('myCtrl',function($scope){
+			$scope.firstname='zhang';
+			$scope.lastname='san';
+		});
+	</script>
+</html>
+<!--
+	ng-app定义应用，ng-controller定义了控制器
+	
+-->

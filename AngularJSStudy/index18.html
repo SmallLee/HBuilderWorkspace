@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="angular.min.js"></script>
+	</head>
+	<body>
+		<h1>外部文件中的控制器</h1>
+		<div ng-app="myApp" ng-controller="myCtrl">
+			<input ng-model="firstname"/><br />
+			<input ng-model="lastname"/><br />
+			姓名：{{firstname+"  "+lastname}}
+		</div>
+	</body>
+	<script src="./js/personCtrl.js"></script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../jquery-3.1.1.min.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#txt").click(function(){
+					$("p").append(" p后面添加的文本");
+				});
+				$("#list").click(function(){
+					$("ol").append("<li>追加列表项</li>")
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p>这是一个段落</p>
+		<p>这是另外一个段落</p>
+		<ol>
+			<li>List item 1</li>
+			<li>List item 2</li>
+			<li>List item 3</li>
+		</ol>
+		<button id="txt">添加文本</button>
+		<button id="list">添加列表项</button>
+	</body>
+</html>

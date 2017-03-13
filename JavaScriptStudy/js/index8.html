@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>带返回值的函数</title>
+		<script>
+			function addNum(num1,num2){
+				return num1+num2;
+			}
+			//这种写法是错的，会产生空指针，因为此时p标签还没有创建
+//			document.getElementById("demo").innerHTML=addNum(3,4);
+		</script>
+	</head>
+	<body>
+		<p id="demo">结果是</p>
+	</body>
+</html>
+

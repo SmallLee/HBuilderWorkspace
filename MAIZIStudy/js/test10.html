@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>对象的特性</h1>
+		<script>
+			var person = {
+			};
+			Object.defineProperties(person,{
+				"username": {
+					value:1,
+					writable:true,
+					enumerable:false,
+					configurable:false
+				},
+				age: {
+					value:2,
+					writable:false,
+					enumerable:true,
+					configurable:false
+				}
+			}
+			);
+			console.log(person.username);//1
+			console.log(person.age);//2
+			var des = Object.getOwnPropertyDescriptor(person,"username");
+			for(var p in des) {
+				console.log(p + "--"+des[p]);
+			}
+//			"value--1"	/MAIZIStudy/js/test10.html (31)
+//[Web浏览器] "writable--true"	/MAIZIStudy/js/test10.html (31)
+//[Web浏览器] "enumerable--false"	/MAIZIStudy/js/test10.html (31)
+//[Web浏览器] "configurable--false
+		</script>>
+	</body>
+</html>

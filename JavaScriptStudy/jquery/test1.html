@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jquery练习</title>
+		<script src="../jquery-3.1.1.min.js"></script>
+		<script type="text/javascript">
+//			$(document).ready(function(){
+//				$("#p1").click(function(){
+//					$(this).hide(); 
+//				});
+//			});
+//		隐藏所有p元素
+//		$(document).ready(function(){
+//			$("#btn").click(function(){
+//				$("p").hide();
+//			});
+//		});
+$(document).ready(function(){
+	$("button").click(function(){
+		$("p").css("background-color","red");
+	});
+});
+		</script> 
+	</head>
+	<body>
+		<!--<p id="p1">点击我，会消失</p>-->  
+		<p>第一个p</p>
+		<p>第二个p</p>
+		<p>第三个p</p>
+		<button id="btn">点击我</button>
+	</body>
+</html>
+
+<!--
+	//防止文档在完全加载之前运行jQuery
+	$(document).ready(function(){
+			
+		});
+	
+-->

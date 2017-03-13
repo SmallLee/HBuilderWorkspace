@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ng-module指令</title>
+		<script type="text/javascript" src="angular.min.js" ></script>
+	</head>
+	<body ng-app="myApp" ng-controller="myCtrl">
+		名字：<input ng-model="name"/>
+		
+	</body>
+	<script type="text/javascript">
+		var app = angular.module("myApp",[]);
+		app.controller("myCtrl",function($scope){
+			$scope.name="你好d";
+		});
+	</script>
+</html>
+<!--
+	将输入域的值与Angulars创建的变量绑定
+	
+-->

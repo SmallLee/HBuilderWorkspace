@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>兄弟元素选择器</title>
+		<style type="text/css">
+			/*与div同处于一个父元素中的兄弟p元素*/
+			div~p{
+				background: pink;
+			}
+			div~span{
+				background: green;
+			}
+			/*span~p{
+				background: green;
+			}*/
+		</style>
+	</head>
+	<body>
+		<span >我是span</span>
+		<div>我不知道</div>
+		<span >我是span</span>
+		<p>你好吗</p>
+		<p>你好吗</p>
+		<p>你好吗</p>
+		<div>
+			<p>div中的p</p>
+			<p>div中的p</p>
+			<p>div中的p</p>
+			<span>我是div中的span</span>
+		</div>
+		<p>结尾的p</p>
+		<p>结尾的p</p>
+		<p>结尾的p</p>
+	</body>
+</html>
+
+<!--
+	兄弟元素选择器：
+	指定位于同一个父元素之中的某个元素之后的所有其它某个种类的兄弟元素所使用
+	的样式。一定要记住是元素之后的，而且是父元素之中。
+	
+-->

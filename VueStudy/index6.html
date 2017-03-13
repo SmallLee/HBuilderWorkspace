@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<button v-on:click="greet">菜鸟教程</button>
+		</div>
+		<script>
+			new Vue({
+				el:"#app",
+				data:{
+					name:'vuew.js'
+				},
+				methods:{
+					greet:function(){
+						alert('hello'+this.name);
+					}
+				}
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../jquery-3.1.1.min.js" ></script>
+		<script type="text/javascript">
+			var a = jQuery.noConflict();
+			a(document).ready(function(){
+				a("button").click(function(){
+					a("p").text("jQuery仍在运行");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>jQuery重命名</h1>
+		<p>p段落</p>
+		<button>测试</button>
+	</body>
+</html>
+
+<!--
+	jQuery使用$代替jQuery,如果我们想重命名，可以自己定义名字
+	var a = jQuery.Query.noConflict();
+	
+-->

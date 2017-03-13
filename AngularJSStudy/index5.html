@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>AngularJS指定</title>
+		<script type="text/javascript" src="angular.min.js" ></script>
+	</head>
+	<body ng-app="" ng-init="firstname='zhangsan'">
+		<p>请输入你的名字</p>
+		名字：<input type="text" ng-model="firstname"/>
+		<p>你输入的名字是：<span ng-bind="firstname"></span></p>
+		{{firstname}}
+	</body>
+</html>

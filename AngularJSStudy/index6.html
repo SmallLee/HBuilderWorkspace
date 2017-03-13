@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数据绑定</title>
+		<script type="text/javascript" src="angular.min.js" ></script>
+	</head>
+	<body ng-app="" ng-init="count=1;price=5">
+		数量：<input type="number" ng-model="count"/><br/>
+		价格：<input type="number" ng-model="price"/>
+		<p>总价为<b>{{count*price}}</b></p>
+	</body>
+</html>

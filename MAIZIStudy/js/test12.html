@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			var obj = {};
+//			console.log(obj.toString())
+//			var arr = new Array();
+//			console.log(Object.prototype.toString.call(arr));//[object Array]
+			//获取对象类型的方法
+			function classOf(x){
+				if (x===null){
+					return 'NULL';
+				}
+				if(x===undefined){
+					return "Undefied";
+				}
+				return Object.prototype.toString.call(x).slice(8,-1);
+			}
+			var x = null;
+			x = 123;
+			x = window;//global
+			x = new Array(['1','2']);
+			//Function
+			console.log(classOf(x));
+			alert(Object.prototype);
+		</script>
+	</body>
+</html>
+<!--
+	对象的类是标识一个对象类型的字符串
+	E3和E5中都为提供这个属性的方法，可以通过对象的toString方法简介查询
+	判断对象类型：
+	1.typeof
+	2.instanceof
+	3.constructor
+	4.Object.prototype.toString.call
+-->

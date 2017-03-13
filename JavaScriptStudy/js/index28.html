@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery</title>
+		<script>
+			function myFunc(){
+				document.getElementById("p1").innerHTML = "Hello jQuery";
+			}
+				onload = myFunc();
+				//匿名函数，页面加载完执行myFunc
+//				onload = function(){
+//					myFunc();
+//				}
+				var func = new Function();
+		</script>
+	</head>
+	<body>
+		<p id="p1">我是p的内容</p>
+	</body>
+</html>
+
+<!--
+	onload事件注意：
+	使用这种方式，当页面还没加载完成的时候就会执行js函数
+	1.onload = myFunc();
+	2.像onload这种形式，使用匿名函数
+	
+	匿名函数主要有两种使用场景：
+	1.回调函数
+	2.直接执行函数
+	
+	匿名函数调用方式：
+	1.将匿名函数赋值给DOM事件
+	2.用()将匿名函数包括起来，然后后面再加一个小括号(包含参数列表)
+-->

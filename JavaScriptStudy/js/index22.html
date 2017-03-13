@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>BOM</title>
+		<script type="text/javascript">
+//			var w = window.innerWidth || document.documentElement.clientWidth
+//			|| document.body.width;
+//			var h = window.innerHeight || document.documentElement.clientHeight
+//			|| document.body.height;
+//			
+//			document.write("浏览器宽度是："+w+"浏览器高度是："+h)
+			
+//			var width = window.screen.availWidth;
+//			document.write(width)//1366
+			//当前页面的路径和文件名
+//			document.write(location.pathname);///JavaScriptStudy/js/index22.htm
+//			document.write(location.host)//127.0.0.1:8020
+			//域名
+//			document.write(location.hostname)//127.0.0.1
+//			document.write(location.href);//当前页面的链接
+			function loadNewDoc(){
+				//跳转
+				location.assign("http://www.baidu.com");
+			}
+		
+		</script>
+	</head>
+	<body>
+		<input type="button" value="加载新文档" onclick="loadNewDoc()">
+	</body>
+</html>
+<!--
+	所有 JavaScript 全局对象、函数以及变量均自动成为 window 对象的成员。
+全局变量是 window 对象的属性。
+全局函数是 window 对象的方法。
+甚至 HTML DOM 的 document 也是 window 对象的属性之一：
+	
+-->

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>引入js</title>
+		<script type="text/javascript">
+			
+	function myFunc(){
+		alert('click me');
+	}
+		</script>
+		<noscript>
+			不支持js
+		</noscript>
+	</head>
+	<body>
+		<a href="javascript:confirm('确定吗？')">报名</a>
+		<p onclick="javascript:confirm('clickme')">Click me</p>
+		<p onclick="confirm('adfdsf')">Click me</p>
+	</body> 
+</html>
+<!--
+	引入js的三种方式：
+	1.script标签直接编写
+	2.引入外部js
+	3.作为某个元素的事件属性
+	
+	
+	js代码屏蔽：
+	1.
+	<!--
+				window.onerror = function(){
+					return true;
+				};
+			//-->
+			
+	2.使用noscript标签
+-->

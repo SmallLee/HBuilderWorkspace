@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>Error对象</h1>
+		<script>
+			try{
+				
+			}catch(e){
+				notExist();//ReferenceError
+			}
+			//自定义错误
+			function myErr(msg){
+				this.name = "myerr";
+				this.message = "自定义的错误信息";
+			}
+			myErr.prototype = Object.create(Object.prototype);
+			myErr.prototype.constructor = myErr;
+			
+			try{
+				throw new myErr();
+			}catch(e){
+				console.log(e.name+":"+e.message)
+			}
+		</script>
+	</body>
+</html>

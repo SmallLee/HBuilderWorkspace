@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML DOM</title>
+	</head>
+	<body>
+		<img id = "img"src="../img/baiduditu.png"/>
+		<script type="text/javascript">
+		document.getElementById("img").src="../img/gaode.jpg"
+//		alert(document.getElementsByName("img"));
+//			document.getElementsByTagName("img").src="../img/gaode.jpg";
+		</script>
+	</body>
+</html>
+
+<!--
+	1.getElementById获取的是单个元素
+	2.getElementsByTagName获取的是[HTML Collection],也就是指定标签名的集合
+	3.getElementsByName获取的是[object NodeList]，返回带有指定名称的对象的集合。查找元素的
+	name属性
+-->

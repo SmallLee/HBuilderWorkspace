@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>盒模型border</title>
+		<style type="text/css">
+			#triangle{
+				width: 0;
+				height: 0;
+				border-top: 100px solid orange;
+				border-bottom: 100px solid transparent;
+				border-left: 100px solid transparent;
+				border-right: 100px solid transparent;
+			}
+			#parent{
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="parent">
+		<div id="triangle"></div>
+		</div>
+	</body>
+</html>
+
+<!--
+	border:1px sllid red
+	border-width border-style border-color
+	
+	
+	css控制div画一个三角形
+-->

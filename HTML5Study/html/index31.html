@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function saveLocal(id){
+				var text = document.getElementById(id);
+				var str  = text.value;
+				localStorage.setItem("content",str);
+			}
+			function loadLocal(id){
+				var msg = document.getElementById(id);
+				var str = localStorage.getItem("content");
+				msg.innerHTML = str;
+			}
+		</script>
+	</head>
+	<body>
+		<p id="msg"></p>
+		<input type="text" id="content" />
+		<input type="button" value="保存数据" onclick="saveLocal('content')"/>
+		<input type="button" value="读取数据" onclick="loadLocal('msg')"/>
+	</body>
+</html>

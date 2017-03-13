@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<p v-if="seen">你能看到我吗？</p>
+		</div>
+		
+		<script type="text/javascript">
+			new Vue({
+				el:"#app",
+				data:{
+					seen:true
+				}
+			});
+		</script>
+	</body>
+</html>
+<!--
+	v-if 指令将根据表达式 seen 的值(true 或 false )来决定是否插入 p 元素
+-->

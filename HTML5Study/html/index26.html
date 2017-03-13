@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>canvas绘制圆形</title>
+		<script type="text/javascript" src="../js/canvas.js">
+			
+		</script>
+		<style type="text/css">
+			body{
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+	</head>
+	<body onload="drawCircle('canvas');">
+		<canvas id="canvas" width="400px" height="400px"></canvas>
+	</body>
+</html>
+<!--
+	方法介绍：
+	beginPath:开始路径
+	closePath:结束路径
+	arc()参数介绍：
+	圆心x和y坐标，半径，起始角度，结束角度，是否是顺时针绘制
+	
+-->

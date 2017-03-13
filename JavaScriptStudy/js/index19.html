@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>遍历对象属性</title>
+	</head>
+	<body>
+		<p>点击下面的按钮，遍历对象属性</p>
+		<button onclick="myFunc()">遍历对象属性</button>
+		<p id="p1"></p>
+		<script>
+			function myFunc(){
+				var x="";
+				var txt="";
+				var person={fname:"bill",age:10};
+				for(x in person) {
+					txt = txt + person[x];
+				}
+				
+			document.getElementById("p1").innerHTML=txt;//bill10
+			}
+		</script>
+	</body>
+</html>
+
+<!--
+	JavaScript for...in 语句循环遍历对象的属性
+	
+-->

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>hgroup元素</title>
+	</head>
+	<body>
+		<hgroup>
+			<h1>文章标题</h1>
+			<!--datetime属性表示元素修改的时间-->
+			<p><time datetime="2018-3-1">2018-3-1</time></p>
+		</hgroup>
+		<hgroup>
+			<h1>文章主标题</h1>
+			<h2>文章子标题</h2>
+		</hgroup>
+		<p>文章内容</p>
+	</body>
+</html>
+
+<!--
+	time标签放在p中是因为time是内联标签，加入p是为了呈现块级元素的样子
+	当我们的同一个区块下面的标题，有主标题和子标题的时候，我们就需要hgroup元素进行包裹。
+-->

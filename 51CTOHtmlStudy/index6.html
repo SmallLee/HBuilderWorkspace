@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>首页布局</title>
+		<style type="text/css">
+			#container{
+				width: 1020px;
+				background-color: gray;
+				margin: auto;
+			}
+			#header{
+				height: 120px;
+				background-color: green;
+			}
+			#main{
+				height: 600px;
+				background-color: red;
+			}
+			#lside{
+				height:600px;
+				width: 700px;
+				background-color: blue;
+				float: left;
+			}
+			.four{
+				width: 330px;
+				height: 280px;
+				background-color: pink;
+				float: left;
+				margin: 10px;
+			}
+			#rside{
+				height: 600px;
+				width: 320px;
+				background-color: yellow;
+				float: right;
+			}
+			#footer{
+				height: 120px;
+				background-color: orange;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="header"></div>
+			<div id="main">
+				<div id="lside">
+					<div class="four"></div>
+					<div class="four"></div>
+					<div class="four"></div>
+					<div class="four"></div>
+				</div>
+				<div id="rside"></div>
+			</div>
+			<div id="footer"></div>
+		</div>
+	</body>
+</html>
+
+<!--
+	不加doctype：容易导致低版本ie不兼容
+	id不能为数字
+	文件编码与charset不一致
+	
+-->

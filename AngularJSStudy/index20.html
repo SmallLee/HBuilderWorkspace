@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="angular.min.js">
+			
+		</script>
+	</head>
+	<body>
+		<h1>AngularJS服务</h1> 
+		<div ng-app="myApp" ng-controller="myCtrl">
+			<p>{{myUrl}}</p>
+		</div>
+	</body>
+	<script>
+		angular.module('myApp',[]).controller('myCtrl',function($scope,$location){
+			$scope.myUrl = $location.absUrl();
+		});
+	</script>
+</html>

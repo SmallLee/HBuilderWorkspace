@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>通过HTML DOM改变样式</title>
+		<script type="text/javascript">
+		//改变颜色
+			function setColor(){
+				document.getElementById("p1").style.color="#ff0000";
+			}
+			//隐藏
+			function setVisibility(){
+				var p1 = document.getElementById("p1");
+				if (p1.style.visibility=="hidden") {
+					p1.style.visibility="visible";
+				} else {
+					p1.style.visibility="hidden";
+				}
+			}
+		</script>
+		
+		<style type="text/css">
+			p {
+				margin: 0;//去掉p标签的margin
+			}
+		</style>
+	</head>
+	<body>
+		<p id="p1" style="background-color: #00ff00;">Hello World</p>
+		<button onclick="setVisibility()">改变颜色</button>
+	</body>
+</html>
+<!--
+	改变样式：
+	document.getElementById(id).style.property=new style
+	
+-->

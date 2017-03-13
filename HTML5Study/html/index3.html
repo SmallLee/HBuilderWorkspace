@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Acticle嵌套使用</title>
+	</head>
+	<body>
+		<acticle>
+			<header>
+				<h1>标题</h1>
+				<p>创建时间：<time pubdate="false">2017-03-01</time></p>	
+			</header>
+			<p>正文内容</p>
+			<section>
+				<h1>读者评论</h1>
+				<acticle>
+					<header>
+						<h2>读者：李小牛</h2>
+						<p>创建时间：<time pubdate="false">2017-2-1</time></p>
+					</header>
+					<p>文章很好</p>
+				</acticle>
+				<acticle>
+					<header>
+						<h2>读者:小星星</h2>
+						<p>创建时间：<time pubdate="false">2017-2-1</time></p>
+					</header>
+					<p>文章非常好</p>
+				</acticle>
+			</section>
+			<footer>
+				<p><small>页脚信息</small></p>
+			</footer>
+		</acticle>
+	</body>
+</html>
+
+<!--
+	lang元素规定元素的语言
+	HTML默认字体大小是16px
+	small标签：变小文字
+	6222020200091567483
+-->

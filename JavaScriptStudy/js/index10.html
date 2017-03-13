@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--表单验证-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单验证</title>
+		<script>
+			function call(){
+				alert("提交了");	
+			}
+		</script>
+	</head>
+	<body>
+		<!--action指提交的路径，method是方法，onsubmit是提交时触发-->
+		<form action="index.html" method="get" onsubmit="call()">
+			<!--type="submit代表是提交按钮，name表示提交到指定页面后，拼接在后
+				面参数的键，例如
+				http://127.0.0.1:8020/JavaScriptStudy/index.html?submit=%E7%A1%AE%E5%AE%9A
+				value是值，当type="submit"时，如果不指定value，默认值为提交
+			-->
+			<input type="submit" name="submit" value="确定"/>
+		</form>
+	</body>
+</html>

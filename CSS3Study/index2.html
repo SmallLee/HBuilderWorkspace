@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>属性选择器小案例</title>
+		<style type="text/css">
+			a[href$=html]:after{
+				content:"网页文件";
+				color: green;
+			}
+			a[href$=png]:after{
+				content:"图片文件";
+				color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="index.html">网站首页</a>
+		<a href="./img/HBuilder.png">网站首页</a>
+	</body>
+</html>
+
+
+<!--
+	1.:after选择器
+	:after 选择器在被选元素的内容后面插入内容。
+	请使用 content 属性来指定要插入的内容。
+
+-->

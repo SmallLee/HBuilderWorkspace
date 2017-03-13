@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>消息框</title>
+		<script type="text/javascript">
+			function alertD(){
+				alert("警告框");
+			}
+			function promptD(){
+				var result = prompt("提示框");
+				console.log(result);//打印出用户在提示框输入的文字
+			}
+			
+			function confirmD(){
+				confirm("确认框");
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="alertD()">警告框</button>
+		<button onclick="promptD()">提示框</button>
+		<button onclick="confirmD()">确认框</button>
+	</body>
+</html>
+
+<!--
+	js有三种消息框：
+	1.警告框
+	2.提示框
+	3.确认框
+	
+-->

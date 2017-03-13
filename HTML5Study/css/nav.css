@@ -1,0 +1,40 @@
+/*通配符选择器*/
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: "微软雅黑";
+	text-align: center;
+}
+a{
+	color:#f60;
+	text-decoration: none;
+}
+hgroup{
+	margin-bottom: 10px;
+}
+nav{
+	height: 48px;
+	background: #ff6600;
+}
+/*后代选择器*/
+nav li{
+	float: left;
+	background: #000000;
+	list-style-type: none;
+	border-radius: 5px;
+	padding: 5px 10px;
+	margin: 10px;
+	color: red;
+}
+
+/*
+ *list-style:设置所有列表的属性
+ *相当于按顺序设置如下属性：
+list-style-type
+list-style-position
+list-style-image
+ * 
+ *  
+ * */

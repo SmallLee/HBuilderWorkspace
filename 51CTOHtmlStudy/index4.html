@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>清除浮动</title>
+		<style type="text/css">
+			#lside{
+				height: 100px;
+				background: green;
+				width: 30px;
+				float: left;
+			}
+			#rside{
+				width: 30px;
+				height: 150px;
+				background: red;
+				float: right;
+			}
+			#common{
+				height: 100px;
+				background-color: orange;
+				/*不允许上方有左浮动元素*/
+				clear: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="lside">左边</div>
+		<div id="rside" align="center">右边</div>
+		<div id="common">普通div</div>
+	</body>
+</html>
+

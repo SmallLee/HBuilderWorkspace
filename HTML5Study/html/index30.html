@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>WebStorge本地临时存储</title>
+		<script>
+			function saveStorage(id){
+				var text = document.getElementById(id);
+				var str = text.value;
+				sessionStorage.setItem("content",str);
+			}
+			function loadStorage(id){
+				var msg = document.getElementById(id);
+				var str = sessionStorage.getItem("content");
+				msg.innerHTML = str;
+			}
+		</script>
+	</head>
+	<body>
+		<p id="msg"></p>
+		<input type="text" id="text" />
+		<input type="button" value="保存数据" onclick="saveStorage('text')"/>
+		<input type="button" value="读取数据" onclick="loadStorage('msg')"/>
+	</body>
+</html>
+
+<!--
+	1.临时保存 sessionStorage.setItem
+	2.永久保存 localStorage.getItem
+	
+-->

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" id="btn1" value="test1" />
+		<script type="text/javascript">
+			var btn = document.getElementById("btn1");
+			btn.onclick = function(event){
+				alert(this)
+				alert(event.type);
+				alert(event.currentTarget);//处理时间的文档节点
+				alert(event.target);//事件的节点
+			};
+		</script>
+	</body>
+</html>

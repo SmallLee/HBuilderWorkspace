@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			function test(){
+//				alert("test");
+//			}
+//			function add(num1,num2){
+//				return num1+num2;
+//			}
+//			
+//			alert(add(1,2,3,4,5));
+//不能给参数设置默认值,下面写法是错误的
+//			function add(num1=1,num2=2){
+//				return num1+num2;
+//			}
+//			function add(num1,num2){
+//				num1 = num1||1;
+//				num2 = num2||2;
+//				return num1+num2;
+//			}
+			function add(num1,num2){
+				if(num1===undefined){
+					num1 = 0;
+				}
+				num2=num2===undefined?0:num2;
+				console.log("num1:"+num1)
+				console.log("num2:"+num2)
+				return num1+num2;
+			}
+			
+			alert(add());//0
+			alert(add(2,3));//5
+		</script>
+	</head>
+	<body>
+		<h1>函数</h1>
+	</body>
+</html>
+<!--
+	1.函数名称重复，会覆盖
+	函数没有return,默认返回undefined
+	2.参数多于定义方法的参数，会忽略后面的
+	3.参数不能定义默认的，有两种方式，一种是判断，一种是通过arguments对象
+-->

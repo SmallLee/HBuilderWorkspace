@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="angular.min.js" ></script>
+	</head>
+	<body ng-app="myApp" ng-controller="myCtrl">
+		<h1>{{letter}}</h1>
+	</body>
+	<script>
+		var app = angular.module('myApp',[]);
+		app.controller('myCtrl',function($scope){
+			$scope.letter = 'Hello';
+		});
+	</script>
+</html>
+
+<!--
+		工作原理：
+	加载html，然后解析成DOM；
+加载angular.js脚本；
+AngularJS等待DOMContentLoaded事件的触发；
+AngularJS寻找ng-app指令，根据这个指令确定应用程序的边界；
+使用ng-app中指定的模块配置$injector；
+使用$injector创建$compile服务和$rootScope；
+使用$compile服务编译DOM并把它链接到$rootScope上；
+ng-init指令对scope里面的变量name进行赋值；
+对表达式{{name}}进行替换，于是乎，显示为“Hello World!”  
+	
+-->

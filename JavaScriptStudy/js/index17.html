@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DOM 节点</title>
+	</head>
+	<body>
+		<div id="d1">这是第一个节点</div>
+		<div id="d2">这是第二个节点</div>
+		<script type="text/javascript">
+			var para = document.createElement("p");
+			para.id="p1";
+			var textnode = document.createTextNode("这是段落");
+			para.appendChild(textnode);
+			var d1 = document.getElementById("d1");
+			d1.appendChild(para);
+			
+			function deleteNode(){
+				var d1 = document.getElementById("d1");
+				var p1 = document.getElementById("p1");
+				//以下的方法都可以删除节点
+//				d1.removeChild(p1);
+				p1.parentNode.removeChild(p1);
+			}
+		</script>
+		<button onclick="deleteNode()">删除p节点</button>
+	</body>
+</html>

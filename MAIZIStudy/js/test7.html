@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>属性的特性</h1>
+		<script type="text/javascript">
+//			function Test(){
+//				
+//			}
+//			Test.prototype.z = 2;
+//			var obj = new Test();
+//			obj.x = 1;
+//			//属性是自己的并且是可枚举的
+//			console.log(obj.propertyIsEnumerable("x"));//true
+//			console.log(obj.propertyIsEnumerable("z"));//false
+
+//			var person = {
+//				name:"lxn",
+//				age:12,
+//				addr:"beijing"
+//			};
+//			
+//			for(var p in person){
+////				console.log(p);//打印出属性名字
+//			}
+//			//打印出对象自己的所有属性名
+//			console.log(Object.getOwnPropertyNames(person));
+//			console.log(Object.keys(person))
+//			var obj = {};
+//			Object.defineProperty(obj,"x",
+//			{value:12,
+//				writable:true,//可写
+//				enumerable:true,//可枚举
+//				configurable:true//可配置的
+//			});
+//			console.log(obj.x);12
+//			obj.x = 2;
+//			console.log(obj.x)
+			var obj = {};
+			Object.defineProperty(obj,"z",{
+				get : function(){//当z没有值的时候，可以这样写
+					return 123;
+				}
+			});
+			console.log(obj.z);//123
+			
+			
+		</script>
+	</body>
+</html>

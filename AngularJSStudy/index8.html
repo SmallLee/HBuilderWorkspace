@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>循环对象</title>
+		<script type="text/javascript" src="angular.min.js" ></script>
+	</head>
+	<body>
+		<div ng-app="" ng-init="persons=[
+			{name:'zhang',address:'beijing'},
+			{name:'zhao',address:'shanghai'},
+			{name:'wang',address:'shanxi'}
+		]">
+		<ul>
+			<li ng-repeat="x in persons">
+				{{x.name+','+x.address}}
+			</li>
+		</ul>
+		</div>
+	</body>
+</html>
