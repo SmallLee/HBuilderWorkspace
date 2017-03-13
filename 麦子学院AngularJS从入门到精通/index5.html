@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="lesson" ng-controller="le" ng-init = "Info = {'name':'a2a','address':'beijing','sex':'male'}">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/angular.min.js">
+			
+		</script>
+	</head>
+	<body>
+		<p>{{Info.name}}</p>
+		<p>{{Info['name']}}</p>
+		<script type="text/javascript">
+			var app = angular.module('lesson',[]);
+			app.controller('le',function(){
+				
+			});
+		</script>
+	</body>
+</html>
+<!--
+	访问对象的属性方式：
+	1.obj.propertyname
+	2.obj['propertyname']
+	
+-->

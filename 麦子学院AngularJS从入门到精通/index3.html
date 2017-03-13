@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/angular.min.js"></script>
+	</head>
+	<body ng-app="lesson" ng-controller="lesson2">
+	<b>{{Now}}</b>
+	</body>
+	<h1>定义日期</h1>
+	<script type="text/javascript">
+		var app = angular.module("lesson",[]);
+		app.controller('lesson2',function($scope){
+			var date = new Date();
+			$scope.Now = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+		});
+	</script>
+</html>

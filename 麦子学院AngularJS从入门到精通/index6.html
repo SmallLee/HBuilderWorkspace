@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="lessson" ng-controller="le">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/angular.min.js"></script>
+	</head>
+	<body>
+		<h1>{{Now}}</h1>
+		<script type="text/javascript">
+			var app = angular.module('lessson',[]);
+			app.controller('le',function($scope){
+				var date1 = new Date();
+				$scope.Now = date1.getHours()+":"+date1.getMinutes()+":"+date1.getSeconds();
+				var b = function(){
+					$scope.$apply(function(){
+					var date = new Date();
+					$scope.Now = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+					})
+				}
+				setInterval(b,1*1000);
+			}); 
+		</script>
+	</body>
+</html>
+
+<!--
+	
+	
+-->

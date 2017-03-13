@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="myCtrl">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/angular.min.js">
+			
+		</script>
+	</head>
+	<body>
+		姓：<input ng-model="xing" /><br/>
+		名：<input ng-model="ming"/>
+		<p id="name" >{{nameView}}</p> 
+		<a href="#" ng-click="showName()">输出姓名</a><br />
+	</body>
+	<script type="text/javascript">
+		//AngularJS点击事件
+		var app = angular.module('myApp',[]);
+		app.controller("myCtrl",function($scope){
+			$scope.showName = function(){
+				console.log($scope.xing);
+				$scope.nameView = $scope.xing + " " +$scope.ming;
+			};
+		});
+	</script>
+</html>

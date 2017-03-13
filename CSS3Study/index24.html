@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>插入项目编号高级</title>
+		<style>
+			h1:before{
+				content:counter(gg);
+				color: pink;
+				font-size: 30px;
+			}
+			h1{
+				counter-increment: gg;
+				counter-reset: lxn;
+			}
+			h2:before{
+				content:counter(lxn);
+				color: orange;
+				font-size: 28px
+			}
+			h2{
+				counter-increment: lxn;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>在多个标题前加上连续编号</h1>
+<h2>编号嵌套、重置编号</h2>
+<h2>编号嵌套、重置编号</h2>
+<h2>编号嵌套、重置编号</h2>
+<h2>编号嵌套、重置编号</h2>
+<h1>在多个标题前加上连续编号</h1>
+<h2>编号嵌套、重置编号</h2>
+<h2>编号嵌套、重置编号</h2>
+<h2>编号嵌套、重置编号</h2>
+<h2>编号嵌套、重置编号</h2>
+<h1>在多个标题前加上连续编号</h1>
+<h1>在多个标题前加上连续编号</h1>
+<h2>编号嵌套、重置编号</h2>
+<h2>编号嵌套、重置编号</h2>
+<h1>在多个标题前加上连续编号</h1>
+	</body>
+</html>
+
+<!--
+	counter-reset:重置编号
+	
+-->

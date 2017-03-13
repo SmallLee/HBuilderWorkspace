@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="nc">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/angular.min.js">
+			
+		</script>
+	</head>
+	<body>
+		<h1>数组数据绑定</h1>
+		<ul>
+			{{names}}
+			<li ng-repeat="x in names">{{x}}</li>
+		</ul>
+		<table >
+			<tr>
+				<th>姓名</th>
+				<th>星座</th>
+			</tr>
+			<tr ng-repeat="x in userInfoList">
+				<td>1</td>
+				<td>2</td>
+			</tr>
+		</table>
+	</body>
+	<script type="text/javascript">
+		var app = angular.module('app',[]);
+		app.controller('nc',function($scope){
+			$scope.names = ['zhang','li','wang'];
+			$scope.userInfoList = [
+			['Tom','水瓶座'],
+			['Jack','射手'],
+			['Mike','狮子']
+			]
+		});
+	</script> 
+</html>

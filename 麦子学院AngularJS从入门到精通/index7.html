@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="lesson" ng-controller="c">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/angular.min.js">
+			
+		</script>
+	</head>
+	<body>
+		<h1>组合绑定</h1>
+		姓：<input ng-model="xing" /><br/>
+		名：<input ng-model="ming"/>
+		<p id="name" >{{xing+""+ming}}</p> 
+		<p id="name" >{{FullName}}</p> 
+		<script>
+			var app = angular.module('lesson',[]);
+			app.controller('c',function($scope){
+				$scope.xing="";
+				$scope.ming="";
+				$scope.FullName = $scope.xing+""+$scope.ming;
+				$scope.$watch('xing',function(){
+					$scope.FullName = $scope.xing+""+$scope.ming;
+				}),
+				$scope.$watch('ming',function(){
+					$scope.FullName = $scope.xing+""+$scope.ming;
+				})
+			});
+		</script> 
+	</body>
+</html>
