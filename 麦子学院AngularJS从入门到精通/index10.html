@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="m" ng-controller="c" ng-init="count=0">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/angular.min.js">
+			
+		</script>
+	</head>
+	<body>
+		<h1>事件绑定</h1>
+		<table border="1px" cellspacing="0px" cellpadding="20px">
+			<thead>
+				<tr> 
+					<td>ID</td>
+					<td>姓名</td>
+					<td>年龄</td>
+					<td>年限</td>
+					<td>操作</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="x in userInfo">
+					<td>{{$index+1}}</td>
+					<td>{{x.name}}</td>
+					<td>{{x.age}}</td>
+					<td>{{x.year}}</td>
+					<td><button ng-click="delete(x.name)">删除</button></td>
+				</tr> 
+			</tbody>
+		</table>
+		<div style="margin-top: 50px;">
+			点击数：<b>{{count}}</b><br />
+			<input type="text" ng-change="countClick()" ng-model="inpyt"/>
+			<input type="text" ng-keypress="keyPress()" ng-model="inpyt"/>
+			<button ng-click="count=count+1">计数</button>
+			<button ng-click="countClick()">计数2</button>
+		</div> 
+		
+		<div style="margin-top: 50px;">  
+			<p ng-show="contentFlag">文章内容</p>
+			<button ng-click="hideP()">隐藏</button>
+		</div>
+		
+		
+		<script type="text/javascript">
+			var app = angular.module('m',[]);
+			app.controller('c',function($scope){
+				$scope.userInfo = [
+				{'name':'张三','age':22,'year':12},
+				{'name':'李四','age':31,'year':33},
+				{'name':'王五','age':22,'year':23},
+				{'name':'赵六','age':44,'year':15}
+				] 
+				$scope.delete = function(name){
+					$scope.userInfo.forEach(function(user,i,list){
+						if (user.name==name) {
+							list.splice(i,1);
+						}
+					}); 
+				}
+				$scope.count=0;
+				$scope.countClick = function(){
+					$scope.count = $scope.count+1;
+				}
+				
+				$scope.contentFlag = true;
+				$scope.hideP = function(){
+					$scope.contentFlag = false;
+				}
+				//按键按下事件
+				$scope.keyPress = function(){
+					console.log('按下按键');
+				}
+			});
+		</script>
+	</body>
+</html>

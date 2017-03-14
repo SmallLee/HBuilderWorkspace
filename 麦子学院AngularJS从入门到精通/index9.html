@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="m" ng-controller="c">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/angular.min.js">
+			
+		</script>
+	</head>
+	<body>
+		<h1>数组对象绑定</h1>
+		<table border="1px" cellspacing="0px" cellpadding="20px">
+			<thead>
+				<tr>
+					<td>ID</td>
+					<td>姓名</td>
+					<td>年龄</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="x in userInfo|orderBy:'age':true">
+					<td>{{$index+1}}</td>
+					<td>{{x.name}}</td>
+					<td>{{x.age}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr />
+		<table border="1px" cellspacing="0px" cellpadding="20px">
+			<thead>
+				<tr>
+					<td>ID</td>
+					<td>姓名</td>
+					<td>年龄</td>
+					<td>年限</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="x in userInfo|orderBy:['-age','-year']">
+					<td>{{$index+1}}</td>
+					<td>{{x.name}}</td>
+					<td>{{x.age}}</td>
+					<td>{{x.year}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr />
+		<table border="1px" cellspacing="0px" cellpadding="20px">
+			<thead>
+				<tr>
+					<td>ID</td>
+					<td>姓名</td>
+					<td>年龄</td>
+					<td>年限</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="x in userInfo|filter:{'age':22,'year':12}">
+					<td>{{$index+1}}</td>
+					<td>{{x.name}}</td>
+					<td>{{x.age}}</td>
+					<td>{{x.year}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<script type="text/javascript">
+			var app = angular.module('m',[]);
+			app.controller('c',function($scope){
+				$scope.userInfo = [
+				{'name':'张三','age':22,'year':12},
+				{'name':'李四','age':31,'year':33},
+				{'name':'王五','age':22,'year':23},
+				{'name':'赵六','age':44,'year':15}
+				]
+			});
+		</script>
+	</body>
+</html>
+<!--
+	单个字段排序：orderBy:'字段名'：'是否是倒序'，默认false
+	多个字段排序：orderBy:['字段名','字段名']，如果需要倒序排序，在字段名前加-
+	
+	过滤：filter:{'字段名':值}或者filter:值(搜索全部出现的包含此值的，模糊查询)
+	多个字段：filter:{'字段名':值,'字段名':值}
+-->

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="a" ng-controller="c">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/angular.min.js">
+			
+		</script>
+	</head>
+	<body>
+		<h1>提交表单事件</h1>
+		<div>
+			<form ng-submit="submitForm()">
+				姓：<input ng-model="xing"/><br />
+				名：<input ng-model="ming"/><br />
+				<input type="submit" value="提交表单"/>
+			</form>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var app = angular.module('a',[]);
+		app.controller('c',function($scope){
+			$scope.submitForm = function(){
+				var xing =$scope.xing;
+				var ming = $scope.ming;
+				console.log(xing+""+ming)
+			}
+		});
+	</script>
+</html>
