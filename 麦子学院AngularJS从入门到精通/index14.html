@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="a" ng-controller="c">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/angular.min.js"></script>
+	</head>
+	<body>
+		<form ng-submit="submitForm()">
+			<label for="form.name">用户名： </label><input type="text" id="form.name" ng-model="form.name"/><br/>
+			<label for="form.nickname">昵称： </label><input type="text" id="form.nickname" ng-model="form.nickname"/><br />
+			<label for="form.age">年龄： </label><input type="text" id="form.age"/ ng-model='form.age'><br/>
+			<label for="form.isMerried">是否已婚： </label><input type="checkbox" id="form.isMerried"/ ng-model='form.isMerried'><br/>
+			<input type="radio" ng-model="form.lovedAnim" value="dog" />狗
+			<input type="radio" ng-model="form.lovedAnim" value="cat" />猫<br/>
+			<label>居住的城市</label><br />
+			<select ng-model='form.city' ng-options="obj.id as obj.text for obj in form.cityList">
+				<!--<option selected="selected">北京</option>
+				<option>上海</option>
+				<option>广州</option>-->
+					<option value="">请选择城市</option>
+			</select>
+			<input type="submit" value="提交信息"/>
+		</form>
+		用户名：<div>{{form.name}}</div>
+		昵称：<div >{{form.nickname}}</div>
+		年龄：<div >{{form.age}}</div>
+		是否已婚：<div >{{form.isMerried}}</div>
+		喜爱的动物：<div>{{form.lovedAnim}}</div>
+		城市：<div>{{form.city}}</div>
+	</body>
+	<script type="text/javascript"> 
+		var app = angular.module('a',[]);
+		app.controller('c',function($scope){
+			$scope.formInit = {
+				name:"",
+				nickname:""
+			}
+			$scope.form = {};
+			$scope.submitForm = function(){
+				console.log($scope.form)
+				$scope.form = angular.copy($scope.formInit)
+			}
+			$scope.form.cityList = [
+			{id:'上海',text:'上海'},
+			{id:'北京',text:'北京'},
+			{id:'广州',text:'广州'}
+			]
+		});
+	</script>
+</html>
+
+<!--
+	label 的for属性和控件的id相同，才会产生绑定效果
+	
+-->

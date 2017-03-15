@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="a" ng-controller="c">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/angular.min.js">
+			
+		</script>
+	</head>
+	<body>
+		<h1>表单验证</h1>
+		<form name="myForm" ng-submit="submitForm()">
+			用户名：<input name="username" ng-model="username" ng-minlength="2" ng-maxlength="4" required/>
+			<span ng-show="myForm.username.$dirty && myForm.username.$invalid">
+				<span style="color:red" ng-show="myForm.username.$error.required">请输入用户名</span>
+				<span style="color:red">请输入合法长度用户名</span>	
+			</span><br/>
+			昵称：<input ng-model="nickname"/><br />
+			<input type="submit" ng-disabled="myForm.$invalid" value="提交" />
+			<hr />
+			编号：<input name="index" ng-model="index" ng-pattern="/^\d+$/"/>
+			<span ng-show="myForm.index.$dirty && myForm.index.$invalid">
+				<span ng-show="myForm.index.$error">不合法</span>
+			</span>
+		</form>
+		<script type="text/javascript">
+			var app = angular.module('a',[]);
+			app.controller('c',function($scope){
+				$scope.myForm = {};
+				$scope.username = '';
+				$scope.submitForm = function(){
+					if($scope.username==undefined){
+						alert('用户名不能为空');
+					}
+					return false; 
+				}
+			});
+		</script>
+	</body>
+</html>
+<!--
+	input的required属性指定文本框是必填的
+	$dirty:布尔型，表单是否修改过
+	$valid:表单内容是否通过验证
+	$error.required判断表单内容是否为空
+	
+-->

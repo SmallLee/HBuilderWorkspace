@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="a">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/angular.min.js"></script>
+	</head>
+	<body>
+		<h1>控制器</h1>
+		<div ng-controller="Father">
+			<h1>{{name}}</h1>
+			
+			<div ng-controller="Son" style="margin-top: 60px;">
+			<h1>{{name}}</h1>
+			<h4>{{phone}}</h4>
+			
+			<div ng-controller="girl" style="margin-top: 60px;">
+			<h1>{{name}}</h1>
+			<h4>{{phone}}</h4>
+			<button ng-click="callBF()">打电话</button>
+		</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		var app = angular.module('a',[]);
+		app.controller('Father',function($scope){
+			$scope.name="父亲";
+			$scope.$on('callBF',function(){
+				$scope.$broadcast('GFcall');
+			});
+		});
+		
+		app.controller('Son',function($scope){
+			$scope.name='儿子';
+			$scope.phone="待机";
+			$scope.$on('GFcall',function(){
+				$scope.phone = '女朋友来电';
+			}); 
+		});
+		
+		app.controller('girl',function($scope){
+			$scope.name = '女朋友';
+			$scope.phone="待机"; 
+			$scope.callBF = function(){
+				$scope.$emit('callBF',1);
+				$scope.phone = "给男朋友打电话";
+			};
+		});
+	</script>
+</html>
+
+<!--
+	控制器通讯
+	1.继承方式
+	2.基于事件方式
+	$emit 向parent传递event和data
+	$on 用于接受event和data
+	$broadcast 想child 传递event和data
+	
+-->

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="a">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/angular.min.js"></script>
+	</head>
+	<body>
+		<h1>控制器</h1>
+		<div ng-controller="Father">
+			<h1>{{name}}</h1>
+			<h2>{{location}}</h2>
+			<button ng-click="changeHouse()">换房子</button>
+			
+			<div ng-controller="Son" style="margin-top: 60px;">
+		<h1>{{name}}</h1>
+		<h2>{{location}}</h2>
+		</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		var app = angular.module('a',[]);
+		app.controller('Father',function($scope){
+			$scope.name="父亲";
+			$scope.location='三生三世';
+			$scope.changeHouse = function(){
+				$scope.location = '落花满天';
+			}
+		});
+		app.controller('Son',function($scope){
+			$scope.name='儿子';
+		});
+	</script>
+</html>
+
+<!--
+	控制器通讯
+	1.继承方式
+	2.基于事件方式
+-->
