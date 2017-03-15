@@ -49,7 +49,7 @@
 				<tr ng-repeat="x in userInfo|orderBy:'age':true">
 					<td>{{$index+1}}</td>
 					<td>{{x.name}}</td>
-					<td>{{x.age}}</td>
+					<td>{{x.age}}</td> 
 				</tr>
 			</tbody>
 		</table>
@@ -88,19 +88,18 @@
 					<td>{{x.name}}</td>
 					<td>{{x.age}}</td>
 					<td>{{x.year}}</td>
->>>>>>> origin/master
 				</tr>
 			</tbody>
 		</table>
 		<script type="text/javascript">
-<<<<<<< HEAD
 			var app = angular.module('lesson',[]);
 			app.controller('c',function($scope){
 				$scope.userInfo = [
 					['Tom',33],
 					['Jack',22],
 					['Good',12],
-					['ggg',22]
+					['ggg',22],
+					['aaa',12]
 				]
 			});
 			
