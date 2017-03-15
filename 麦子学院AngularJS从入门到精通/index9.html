@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app='lesson' ng-controller="c">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+			<script src="js/angular.min.js">
+				
+			</script>
+		<style type="text/css">
+			td{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>表格绑定</h1>
+		<table border="1px" cellspacing="0" cellpadding="10px">
+			<thead>
+				<tr>
+					<th>姓名</th>
+					<th>年龄</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="x in userInfo">
+					<td>{{x[0]}}</td>
+					<td>{{x[1]}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<script type="text/javascript">
+			var app = angular.module('lesson',[]);
+			app.controller('c',function($scope){
+				$scope.userInfo = [
+					['Tom',33],
+					['Jack',22],
+					['Good',12],
+					['ggg',22]
+				]
+			});
+			
+		</script>
+	</body>
+</html>
+
+<!--
+	
+	
+	
+-->
