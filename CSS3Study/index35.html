@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			dl.run-in dt{
+				display: run-in;
+				background: pink;
+			}
+			dl.compat dt{
+				display: compact;
+				background: orange;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>run-in与compat</h1>
+		<dl class="run-in">
+			<dt>书本</dt>
+			<dd>疯狂android讲义</dd>
+			<dd>疯狂java讲义</dd>
+		</dl>
+		<dl class="compat">
+			<dt>动物</dt>
+			<dd>熊猫</dd>
+			<dd>老虎</dd>
+		</dl>
+	</body>
+</html>
+<!--
+	run-in
+	将元素指定为run-in类型或compact类型时，如果元素后面还有block类型的元素，
+	run-in类型那个的元素将被包括在后面的block类型的元素的内部，
+	而compact类型的元素将被放置在block类型的元素左边。
+	
+-->
