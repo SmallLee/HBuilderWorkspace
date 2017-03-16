@@ -4,20 +4,23 @@
 		<meta charset="utf-8">
 		<title></title>
 		<script src="js/vue.js"></script>
+		<script type="text/javascript">
+			onload = function(){
+				new Vue({
+					el:"div",
+					data:{
+						message:"Hello Vue"
+					}
+				});
+			}
+		</script>
 	</head>
 	<body>
 		<div id="app">
 		<p>{{message}}</p>
 		<input v-model="message" />
 		</div>
-		<script type="text/javascript">
-			new Vue({
-				el:"div",
-				data:{
-					message:"Hello Vue"
-				}
-			});
-		</script>
+		
 	</body>
 </html>
 <!--

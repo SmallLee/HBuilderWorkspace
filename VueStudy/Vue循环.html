@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<ul>
+				<li v-for ="(value,index) in arr">
+					{{value}}
+					{{index}}
+				</li>
+			</ul>
+			<hr />
+			<ul>
+				<li v-for="(a,index,key) in json">
+					{{a}}
+					{{index}}
+					{{key}}
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			new Vue({
+				el:"#app",
+				data:{
+					msg:'hlel',
+					arr:['a','b','c','d'],
+					json:{a:'apple',b:'banana',c:'orange'}
+				}
+			});
+		</script>
+	</body>
+</html>
