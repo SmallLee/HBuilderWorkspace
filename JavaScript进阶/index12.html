@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var monkey = {
+				color:'black',
+				breath:'air'
+			}
+			function Human(name){
+				this.name = name;
+			}
+			Human.prototype = monkey;
+			var p = new Human('a');
+			console.log(monkey.isPrototypeOf(p))//true
+			p.constructor = 'this is a test';
+			//下面两个结果一样
+			console.log(p.__proto__)
+			console.log(Human.prototype)
+		</script>
+	</body>
+</html>
+<!--
+	__proto__和prototype的区别：
+	prototype是构造器函数的属性
+	__proto__是对象的属性
+	
+-->

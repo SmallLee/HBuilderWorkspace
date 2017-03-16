@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function Person(){
+				this.mouth = true;
+			}
+			
+			var p1 = new Person();
+			var p2 = new Person();
+			console.log(Person.prototype)//Object
+			Person.prototype.say = function(){
+				return 'hello';
+			}
+			console.log(p1.say())//hello
+			console.log(p1.constructor)//function Person
+			console.log(p1.constructor.prototype.constructor)//function Person
+			console.log(p1.constructor.prototype.mouth)//原型上没有
+			
+			Person.prototype = {
+				hair:'true',
+				face:'true'
+			};
+			
+			console.log(p1.hair)
+			console.log(p1.__proto__.say())//hello
+			//重新创建一个对象
+			var p2 = new Person();
+			console.log(p2.hair);//true
+			console.log(p2.__proto__.face)
+			console.log(p2.constructor)
+		</script>
+	</body>
+</html>
+<!--
+	构造器的prototype默认包含两个属性：constructor和__proto__
+	Object
+		constructor:function Person()
+		__proto__:Object
+	
+	原有对象是不能访问原型对象的新增属性
+-->

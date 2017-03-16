@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>this</h1>
+		<script>
+			var a=10;
+			var foo={
+			  a:20,
+			  bar:function(){
+			      var a=30;
+			      return this.a;
+			    }
+			}
+			//对象内的方法，this指向对象
+			console.log(foo.bar());//20
+			//匿名函数自调用，和上面没区别
+			console.log((foo.bar)());//20
+			//普通函数
+			console.log((foo.bar=foo.bar)());//10
+			//小括号表达式，会返回最后一个值
+			console.log((foo.bar,foo.bar)());//10
+		</script>
+	</body>
+</html>

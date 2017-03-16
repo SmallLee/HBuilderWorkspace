@@ -11,13 +11,44 @@
 //				return 'a中调用b的结果是'+b(param);
 //			}
 //			document.write(a(5));
-			function a(param){
-				var b = function(param1){
-					return param1+10;
-				}
-				return "a中调用b的结果是"+b(param);
-			}
-			document.write(a(2));
+			//函数标记法
+//			function a(param){
+//				var b = function c(param1){
+//					return param1+10;
+//				}
+//				return "a中调用b的结果是"+c(param);
+//			}
+//			document.write(a(2));
+			//返回函数的函数
+//			function a(){
+//				alert('a');
+//				return function b(){
+//					alert('b');
+//				}
+//			}
+//			var func = a();//调用函数a,返回一个函数
+//			func();//执行返回的函数
+			//重写自己的函数
+//			function a(){
+//				alert('a');
+//				a = function(){
+//					alert('b');
+//				};
+//			}
+//			a();//弹出a
+//			a();//弹出b
+			function hi(){  
+			  var a = 1;  
+			  return function(){
+			   console.log(a++);
+			  };  
+			};         
+			var aaa = hi();
+			var bbb = hi;
+			aaa();//1
+			aaa();//2
+			bbb();//
+			console.log(bbb())//function(){console.log(a++)}
 		</script>
 	</head>
 	<body>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>闭包的应用</h1>
+		<script type="text/javascript">
+//			var setValue,getValue;
+//			(function(){
+//				var value;
+//				setValue = function(n){
+//					value = n;
+//				}
+//				getValue = function(){
+//					return value;
+//				}
+//			})();
+//			setValue('a')
+//			document.write(getValue())
+			function func(x){
+				var i = 0;
+				return function(){
+					return x[i++];
+				}
+			}
+			var a = func(['a','b','c','d']);
+				document.writeln(a());//a
+				document.writeln(a());//b
+				document.writeln(a());//c
+				document.writeln(a());//d
+		</script>
+	</body>
+</html>

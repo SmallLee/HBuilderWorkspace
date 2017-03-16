@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>this</h1>
+		<script>
+			//this位于一个对象的方法内，this指向该对象
+//			var student = {
+//				name:"lxn",
+//				getage: function(){
+//					alert(this==student);//true
+//					return 12;
+//				}
+//			}
+//			student.getage();
+//			this位于普通方法内，指向全局对象window
+//			var name = "window";
+//			function getName(){
+//				var name = "function";
+//				console.log(this)//[object Window]
+//				alert(this.name);
+//			}
+//			getName();
+//			构造函数里，this指向构造函数的对象
+//			var name = "window";
+//			function Cat(){
+//				console.log(this)
+//				this.name = "constructor";	
+//			}
+//			var cat = new Cat();
+//			console.log(cat.name);//constructor
+			//如果构造器里面返回一个Object的对象，那么this指向Object
+//			var name = "window";
+//			function Student(){
+//				this.name = "student";
+//				return {
+//					name:"object name"
+//				}
+//			}
+//			var s = new Student();
+//			console.log(s.name);//object name
+			//this指向失效问题
+			var name = "window";
+			var Student = {
+				name:"student",
+				getname: function(){
+					console.log(this.name)
+				}
+			}
+			Student.getname();//student
+			var s = Student.getname;
+			//此时s是一个函数 function(){
+//				console.log(this.name)
+//			}
+			s();//window
+		</script>
+	</body>
+</html>
+<!---->
+	

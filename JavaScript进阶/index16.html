@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			function Shape(){
+//				this.name = "shape";
+//			}
+			function Shape(){};
+			Shape.prototype.name = "shape";
+			
+			function TwoDShape(){};
+			TwoDShape.prototype.constructor = TwoDShape;
+			TwoDShape.prototype = new Shape();
+			TwoDShape.prototype.name = "TwoDShape";
+			
+			function Triangle(width,height){
+				this.Width = width;
+				this.height = height;
+			}
+		</script>
+	</body>
+</html>
+<!--
+	放到原型中去，防止了每创建一个对象，都带一个name属性，这样节省了内存，提高了效率
+	原型中放一些固定不变的值
+-->

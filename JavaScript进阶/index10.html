@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var obj = {};
+			console.log(obj.constructor)//function Object
+			var arr = [];
+			console.log(arr.constructor)//function Array
+			
+			function test(){
+				
+			}
+			var f = new test();
+			console.log(f.constructor)//test
+//			console.log(f.toString())//[object Object]
+//			//重写toString方法
+//			test.prototype.toString = function(){
+//				return 'tostring';
+//			}
+//			console.log(f.toString())//tostring
+			
+//			var toString = Object.prototype.toString;
+//			console.log(toString)
+//			//function toString() { [native code] }"不加括号的时候，返回的是函数本身
+//			console.log(toString.call(new Date))//[object Date]
+			var date = new Date;
+			console.log(date.getDay())
+		</script>
+	</body>
+</html>
+<!--
+	constructor:返回一个指向创建了该对象原型的函数引用
+	
+-->

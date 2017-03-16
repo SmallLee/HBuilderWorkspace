@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var obj = {name:1};
+			//将对象变为不可扩展的
+			Object.preventExtensions(obj)
+			console.log(Object.isExtensible(obj));
+			obj.x = 1;
+			console.log(obj.x);
+			//Cannot define property:z, object is not extensible."
+//			Object.defineProperty(obj,'z',{value:1})
+		</script>
+	</body>
+</html>
+<!--
+	不可扩展，
+	冻结，
+	封闭
+	
+	
+-->

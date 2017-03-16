@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>访问数组</h1>
+		<script>
+			function test(){
+				var a =[];
+				for (var i = 0; i < 3; i++) {
+					a[i] = function(){
+						return i;
+					}
+				}
+				document.write(a[0]());//3
+				document.write(a[1]());//3
+				document.write(a[2]());//3
+			}
+				test();
+		</script>
+	</body>
+</html>
+<!--
+	闭包指向了共同的局部变量i，闭包并不会记录这个值，而只是修改
+	
+-->

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			var obj = {
+//				get foo() {
+//					return 123;
+//				}
+//			}
+//			console.log(Object.getOwnPropertyDescriptor(obj,'foo'))
+			var obj1 = {x:1};
+			var obj = Object.create(obj1);
+			//以下两个方法不能获取原型中的属性
+			console.log(Object.getOwnPropertyNames(obj));
+			console.log(Object.getOwnPropertyDescriptor(obj,'x'));
+		</script>
+	</body>
+</html>
+
+<!--
+	元素的get和set属性
+	
+-->

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function test(a,b){
+				return a+b;
+			}
+			console.log(test.length)//2
+			console.log(test.constructor)//function Function()
+			console.log(test.prototype)//
+		</script>
+	</body>
+</html>
+<!--
+	每个函数都有一个 length属性 （函数名.length）， 表示期望接收的函数的个数（而不是实际接收的参数个数）
+	它与arguments不同。 arguments.length 是表示函数实际接收的参数个数。
+	
+-->

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>call和apply方法</h1>
+		<script type="text/javascript">
+//			function Animal(name){
+//				this.name ="animal";
+//				this.getname = function(){
+//					alert(this.name);
+//				}
+//			}
+//			function Cat(){
+//				this.name = "cat";
+//			}
+//			var animal = new Animal();
+//			var cat = new Cat();
+//			animal.getname.call(cat);//cat
+			//继承
+//			function Animal(name){
+//				this.name = name;
+//				this.getname = function(){
+//					alert(this.name);
+//				}
+//			}
+//			function Cat(name){
+//				//使用Animal代替this，那么Cat就有了Animal的属性和方法了
+//				Animal.call(this,name);//调用父类构造函数
+//			}
+//			
+//			var cat = new Cat('black cat');
+//			cat.getname();
+		</script>
+	</body>
+</html>
+<!--
+	call的用法：
+	1.调用父类的构造函数
+	2.调用匿名函数
+	3.调用函数并指定this
+	fx.call( thisArg [，arg1，arg2，… ] )
+	
+	第一个参数代表函数fx体内this的指向
+	
+-->

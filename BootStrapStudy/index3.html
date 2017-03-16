@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!--针对IE8新加的设置-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--移动设备优先。宽度就是这个设备device的宽度，initial-scale=1表示在移动设备上不进行缩放。不缩放时，
+		移动设备上就出现了滚动条。-->
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--上面3割meta标签必须放在最前面，其他的放在后面-->
+		<title></title>
+		<!--BootStrap核心CSS文件-->
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<!--使用BootStrap之前要引入jquery-->
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<!--BootStrap核心js文件-->
+		<script src="js/bootstrap.min.js"></script>
+		<title></title>
+		<style type="text/css">
+			div{
+				background: pink;
+				border: 2px solid green;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>栅格参数</h1>
+		<div class="container">
+			<div class="row">
+				<!--在中等分辨率下是8:4，在超小分辨率下是6:6，在小分辨率下是3:6-->
+				<!--<div class="col-md-8 col-sm-6 col-xs-3">div1</div>
+				<div class="col-md-4 col-sm-6 col-xs-6">div2</div>-->
+				<div class="col-xs-6 col-sm-3">col-xs-6 col-sm-3 </div>
+				<div class="col-xs-6 col-sm-3">col-xs-6 col-sm-3  </div>
+				<div class="col-xs-6 col-sm-3">col-xs-6 col-sm-3  </div>
+				<div class="col-xs-6 col-sm-3">col-xs-6 col-sm-3  </div>
+			</div>
+		</div>
+	</body>
+</html>
+<!--
+	跨设备组合：
+	在不同设备上定义不同比例
+	
+-->

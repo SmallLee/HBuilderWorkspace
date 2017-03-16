@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			var s = "abcd"
+//			console.log(s.reverse());
+//			String.prototype.reverse = function(){
+//				return Array.prototype.reverse.apply(this.split('')).join();
+//			}
+//			console.log("abcd".reverse());
+			//检测方法是否存在，不存在进行扩展
+			console.log(String.prototype.length)//undefined
+			
+			if(!Array.prototype.InArray) {
+				Array.prototype.InArray = function(el){
+					for(var i=0;i<this.length;i++){
+						if (this[i]==el){
+							return true;
+						}
+					}
+					return false;
+				}
+			}
+			var arr = ['a','b','c','d'];
+			console.log(arr.InArray('d'));
+		</script>
+	</body>
+</html>
+<!--
+	JavaScript中String对象没有reverse方法，只有Array对象有
+	
+-->

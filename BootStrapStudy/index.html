@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!--针对IE8新加的设置-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--移动设备优先。宽度就是这个设备device的宽度，initial-scale=1表示在移动设备上不进行缩放。不缩放时，
+		移动设备上就出现了滚动条。-->
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--上面3割meta标签必须放在最前面，其他的放在后面-->
+		<title></title>
+		<!--BootStrap核心CSS文件-->
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<!--使用BootStrap之前要引入jquery-->
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<!--BootStrap核心js文件-->
+		<script src="js/bootstrap.min.js"></script>
+		<style type="text/css">
+			div{ border: 1px #333333 solid;}
+			@media(max-width: 640px) {
+				/*小于640px才生效*/
+				div{
+					background: orange;
+				}
+			}
+			/*100-640px范围之内，才起作用*/
+			@media only screen and (min-width: 100px) and (max-width: 640px) {
+				div{background: pink;}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div class="row">
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+				<div class="col-md-1">col-md-1</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8 col-sm-6">md8</div>
+				<div class="col-md-4 col-sm-6">md4</div
+			</div>
+		</div>
+	</body>
+</html>
+<!--
+	xs
+	sm-750px
+	md-970px
+	lg
+	
+-->

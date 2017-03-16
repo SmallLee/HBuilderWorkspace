@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			function func(){
+//				var a = 'king';//a在全局空间中看不到
+//				return function(){
+//					return a;
+//				}
+//			}
+//			var result = func();
+//			console.log(result())//king
+			var n;
+			function func(){
+				var a = 'king';
+				n = function(){
+					return a;
+				}
+			}
+			func();
+			console.log(n());//king
+		</script>
+	</body>
+</html>
