@@ -7,19 +7,42 @@
 	</head>
 	<body>
 		<div id="app">
-		<input type="button" value="按钮" v-on:click="show()"/>
+			<ul>
+				<li v-for="(value,index) in arr">
+					{{value}}
+					{{index}}
+				</li>
+			</ul>
+		<input type="button" value="添加" v-on:click="add()"/>
+		<input type="button" value="移除" v-on:click="remove()"/>
 		</div>
 		<script type="text/javascript">
-			new Vue({
+			var vm = new Vue({
 				el:"#app",
 				data:{
+					arr:['a','b','c'],
+					json:{a:'apple',b:'banana',c:'orange'}
 				},
 				methods:{
-					show:function(){
-						alert('a');
+					add:function(){
+//						this.arr.push('d');
+						this.arr.unshift('d');
+					},
+					remove:function(){
+						this.arr.pop();
 					}
 				}
 			});
 		</script>
 	</body>
 </html>
+<!--
+	数组方法：
+	pop删除并返回数组最后一个元素
+	push 向数组末尾添加元素
+	shift 删除并返回数组开头的元素
+	unshift 向数组开头添加元素
+-->
+
+
+

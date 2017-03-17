@@ -10,15 +10,12 @@
 			<ul>
 				<li v-for ="(value,index) in arr">
 					{{value}}
-					{{index}} 
 				</li>
 			</ul>
 			<hr />
 			<ul>
 				<li v-for="(a,index,key) in json">
 					{{a}}
-					{{index}}
-					{{key}}
 				</li>
 			</ul>
 		</div>
@@ -34,3 +31,7 @@
 		</script>
 	</body>
 </html>
+<!--
+	遍历的时候需要显示的指定索引和值，否则会提示语法异常
+	
+-->
