@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.tab_content{
+				background: blue;
+			}
+			#tab1:target,#tab2:target,#tab3:target{
+				background: orange;
+			}
+			span:before{
+				content: "span前面";
+				color: orange;
+				margin-right: 20px;
+			}
+			span:after{
+				content: "span后面";
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="tabs">
+			<li><a href="#tab1">标签一</a></li>
+			<li><a href="#tab2">标签二</a></li>
+			<li><a href="#tab3">标签三</a></li>
+		</ul>
+		<div id="tab1" class="tab_content">第一个tab</div>
+		<div id="tab2" class="tab_content">第二个tab</div>
+		<div id="tab3" class="tab_content">第三个tab</div>
+		
+		<span>我是span标签</span>
+	</body>
+</html>
+<!--
+区别：
+1.伪类本质上是为了弥补常规CSS选择器的不足，以便获取到更多信息；
+2.伪元素本质上是创建了一个有内容的虚拟容器；
+3.CSS3中伪类和伪元素的语法不同；
+4.可以同时使用多个伪类，而只能同时使用一个伪元素；
+	
+-->

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*[title]{
+				color: red;
+			}
+			a[href]{
+				color: green;
+			}
+			a[href][title]{
+				color: orange;
+			}
+			a[href="www.baidu.com"]{
+				text-decoration: line-through;
+			}
+			a[href~="abc"]{
+				font-size: 25px;
+			}
+			*[href|="td"]{
+				font-size: 30px;
+				border: 2px solid black;
+				color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 title="你好">标题</h1>
+		<span title="span">我是span标签</span>
+		<!--acrony标记字母缩写-->
+		<acronym title="Word Wid Web">WWW</acronym>
+		<!--abbr显示缩略语-->
+		<abbr title="你好，我是开发">你</abbr>
+		
+		<a href="">百度一下</a>
+		<a title="google">谷歌一下</a><br />
+		<a href="" title="">搜狗</a><br />
+		<a href="www.baidu.com">百度</a><br />
+		<a href="abc hh">部分属性匹配</a><br />
+		<a href="td">特定属性匹配</a>
+	</body>
+</html>
+<!--
+	title属性规定元素的额外属性，一般鼠标放在上面会显示title的内容
+	属性选择器：
+	*[title]：任何包含title属性的元素
+	[属性名="值"]：指定具体属性
+	[属性名~="value"] :包含某个属性值
+	
+	========================
+	子串匹配属性选择器
+	[abc^='value']:以指定字符开始
+	[abv$='value']:以指定字符结束
+	[abc*='value']:包含某个字符串
+	===================
+	特定属性选择器
+	*[abc|="value"]:以value或者value-开头的
+	========================
+	点号类名记法
+	p.import等效于p[class="import"]
+-->
