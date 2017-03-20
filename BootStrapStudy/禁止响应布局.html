@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!--针对IE8新加的设置-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--移动设备优先。宽度就是这个设备device的宽度，initial-scale=1初始缩放比。不缩放时，
+		移动设备上就出现了滚动条。-->
+		<!--禁止响应布局需要把移动设备优先删掉-->
+    	<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+		<!--上面3割meta标签必须放在最前面，其他的放在后面-->
+		<title></title>
+		<!--BootStrap核心CSS文件-->
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<!--使用BootStrap之前要引入jquery-->
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<!--BootStrap核心js文件-->
+		<script src="js/bootstrap.min.js"></script>
+		<title></title>
+		<style type="text/css">
+			div{
+				border: 1px orange solid;
+				
+			}
+			.container{
+				width: 1000px;margin: 10px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6">第一个div</div>
+				<div class="col-xs-6">第二个div</div>
+			</div>
+		</div>
+	</body>
+</html>
+<!--
+	禁止响应布局步骤：
+	1.移除移动设备优先的标签
+	2.给div设定宽度
+	3.删除菜单折叠
+	4.如果采用了栅格布局，使用col-xs代替col-md和col-lg,这样能保证栅格能在所有设备中展开
+	
+-->
