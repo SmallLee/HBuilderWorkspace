@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<title></title>
+	</head>
+	<body>
+		<form class="form-control form-group">
+			<label for="">用户名：</label>
+			<input type="tel" autofocus placeholder="请输入电话号码"/><br />
+			<label for="">密码:</label>
+			<input type="password" disabled placeholder="输入密码" />
+		</form><br />
+		<form>
+			<fieldset  disabled>
+				<legend>登录</legend>
+				<div class="radio">
+					<label for=""><input type="radio" name="sex" value="M" />男</label>
+				</div>
+				<div class="checkbox">
+					<label for=""><input type="checkbox" name="" id="" value="" />中国</label>
+				</div>
+				<div class="checkbox">
+					<label for=""><input type="checkbox" checked/>中国</label>
+				</div>
+			</fieldset>
+		</form>
+		<form >
+			<div class="checkbox">
+				<label for=""><input type="text" placeholder="请输入电话号码" readonly /></label>
+			</div>
+		</form>
+		<hr />
+		<h2>校验状态</h2>
+		<div>
+			<div class="form-group has-success">
+				<!--注意：如果不加control-label属性的化对文本框里面的内容也就是文字是不起作用的-->
+				<label class="control-label">用户名：</label>
+				<input type="tel" placeholder="请输入电话号码" class="form-control" />
+			</div>
+		</div>
+	</body>
+</html>
+<!--
+	autofocus :页面加载完毕自动获得焦点
+	disable:禁用
+	在fieldset上加disable禁用整个表单
+	readonly设置为只读
+-->

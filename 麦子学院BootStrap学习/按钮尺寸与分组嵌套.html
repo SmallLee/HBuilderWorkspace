@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<title></title>
+	</head>
+	<body>
+		<!--外层容器的按钮组尺寸的设置会覆盖里面的按钮尺寸设置。-->
+		<div class="btn-group btn-group-lg">
+			<button class="btn btn-info btn-lg">按钮</button>
+			<button class="btn btn-warning btn-sm">按钮</button>
+			<button class="btn btn-danger btn-xs">按钮</button>
+		</div>
+		<hr />
+		<h2>嵌套分组</h2>
+		<div class="btn-group">
+			<button class="btn btn-info">按钮</button>
+			<button class="btn btn-info">按钮</button>
+			<button class="btn btn-info">按钮</button>
+			<!--嵌套一个下拉菜单-->
+			<div class="btn-group dropdown">
+				<button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+					下拉
+					<span class="caret"></span>
+				</button>
+				<!--下拉菜单的子菜单-->
+				<ul class="dropdown-menu">
+					<li><a href="">首页</a></li>
+					<li><a href="">关于</a></li>
+					<li><a href="">练习</a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
