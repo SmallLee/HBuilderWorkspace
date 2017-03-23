@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<title></title>
+		<style type="text/css">
+			.ys{
+				background: red;
+			}
+		</style>
+		<script>
+			$(function(){
+				$("#btn").click(function(){
+					//并列选择器
+					$("div,span").toggleClass("ys");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div>div标签</div>
+		<span>span标签</span>
+		<button id="btn">点击</button>
+	</body>
+</html>
