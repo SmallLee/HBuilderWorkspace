@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#odd").click(function(){
+					$("div:odd").toggleClass("jingshan");
+				});
+				$("#even").click(function(){
+					$("div:even").toggleClass("jingshan");
+				});
+				$("#first").click(function(){
+					$("div:first").toggleClass("jingshan");
+				});
+				$("#last").click(function(){
+					$("div:last").toggleClass("jingshan");
+				});
+				$("#eq2").click(function(){
+					$("div:eq(2)").toggleClass("jingshan");
+				});
+				$("#not1").click(function(){
+					$("div:not(.four)").toggleClass("jingshan");
+				});
+				$("#gt1").click(function(){
+					$("div:gt(1)").toggleClass("jingshan");
+				});
+				$("#lt3").click(function(){
+					$("div:lt(3)").toggleClass("jingshan");
+				});
+				$("#display").click(function(){
+					$("#hello:hidden").css("display","block")
+				});
+				$("#hidden").click(function(){
+					$("#hello:visible").css("display","none")
+				});
+				$("#focus").click(function(){
+					$(":focus").css("display","none")
+				});
+			});
+		</script>
+		<style type="text/css">
+			.jingshan{
+				background: green;
+			}
+			#hello{
+				display: none;
+				}
+		</style>
+		<title></title>
+	</head>
+	<body>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div class="four">4</div>
+		<button id="first">第一个元素</button>
+		<button id="last">最后一个</button>
+		<button id="odd">奇数选择器</button>
+		<button id="even">偶数选择器</button>
+		<hr />
+		<button id="eq2">索引为2的div</button>
+		<button id="not1">索引不为1的div</button>
+		<button id="gt1">索引大于1的div</button>
+		<button id="lt3">索引小于3的div</button>
+		<hr />
+		<h3>显示隐藏</h3>
+		<div style="width: 200px;background:red;" id="hello">你好</div>
+		<button id="display">dispaly</button>
+		<button id="hidden">hidden</button>
+		<hr />
+		<input type="text" id="inputName"/>
+		<button id="focus">显示</button>
+	</body>
+</html>

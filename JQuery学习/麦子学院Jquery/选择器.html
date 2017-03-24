@@ -15,12 +15,55 @@
 					//并列选择器
 					$("div,span").toggleClass("ys");
 				});
+				$("#btn2").click(function(){
+					$("form>input").toggleClass("ys");
+				});
+				$("#btn3").click(function(){
+					$("div input").toggleClass("ys");
+				});
+				$("#btn4").click(function(){
+					//与div紧邻的span改变样式
+					$("div + input").toggleClass("ys");
+				});
+				$("#btn5").click(function(){
+					//与div紧邻的span改变样式
+					$("div ~ p").toggleClass("ys");
+				});
 			});
 		</script>
 	</head>
 	<body>
 		<div>div标签</div>
 		<span>span标签</span>
-		<button id="btn">点击</button>
+		<button id="btn">并列选择器</button>
+		<hr />
+		<form action="">
+			<input placeholder="请输入姓名" />
+		</form>
+		<button id="btn2">子元素选择器</button>
+		<hr />
+		<div>
+			<span>我是span标签
+				<input type="text" placeholder="输入框" />
+			</span>
+		</div>
+		<button id="btn3">后代选择器</button>
+		<hr />
+		<div>我是div</div>
+		<label for="name">姓名：</label><input type="text" id="name" placeholder="请输入姓名" />
+		<span>我是span1</span>
+		<span>我是span2</span>
+		<button id="btn4">紧邻选择器</button>
+		<hr />
+		<div>
+		</div>
+		<p>p标签1</p>
+		<p>p标签2</p>
+		<p>p标签3</p>
+		<button id="btn5">同辈选择器</button>
 	</body>
 </html>
+<!--
+	同辈选择器可以选择多个同级的，而紧邻只能选择一个
+	
+-->

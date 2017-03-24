@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<title></title>
+		<script type="text/javascript">
+			$(function(){
+				$("#attr").click(function(){
+					$("[id='ab']").css("background","orange");
+					//查找id为inputName并且name为hello的
+					$("[id='inputName'][name='hello']").css("background","orange");
+				});
+			});
+		</script>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<div id="ab">id为ab</div>
+		<span id="ab">
+			我是span
+		</span>
+		<input type="text" id="inputName" name="hello" />
+		<button id="attr">属性选择器</button>
+	</body>
+</html>
