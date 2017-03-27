@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<title></title>
+		<script type="text/javascript">
+			$(function(){
+				$("#dom_css").click(function(){
+					$("#dom_css_set").css("color","red");
+				});
+				$("#dom_height").click(function(){
+//					$("#dom_css_set").height("200");
+					$("#dom_css_set").css("height","200");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<label  for="">css普通操作<label><br />
+		<span id="dom_css">普通的css编辑[color]</span><br/>
+		<span id="dom_height">普通的css编辑[height]</span><br/>
+		<div  id="dom_css_set" style="background: red;">这里是css的基础操作</div><br />
+	</body>
+</html>

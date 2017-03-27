@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#node_html").click(function(){
+					$("#get_html").html("<h1>我是h1标题</h1>");
+				});
+				$("#node_text").click(function(){
+					$("#get_text").text("文本");
+				});
+				$("#node_val").click(function(){
+					$("#getVal").val("aaa");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<label for="">节点内容的设置</label>
+		<span id="node_html">html</span>
+		<span id="node_text">text</span>
+		<span id="node_val">value</span>
+		<div id="node_get">
+			<div id="get_html"><h4>h4标题</h4></div>
+			<div id="get_text"><h2>h2标题</h2></div>
+			<input type="text" value="123" id="getVal" />
+		</div>
+	</body>
+</html>

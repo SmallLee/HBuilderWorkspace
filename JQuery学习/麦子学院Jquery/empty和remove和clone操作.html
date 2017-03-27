@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<script>
+			$(function(){
+				$("#dom_empty").click(function(){
+					$("#node_remove").empty();
+				});
+				$("#dom_remove").click(function(){
+					$("#node_remove").remove();
+				});
+				$("#dom_clone").click(function(){
+					alert($("#node_clone").clone().html());
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<span id="dom_empty">清空[empty]操作</span><br />
+		<span id="dom_remove">删除[remove]操作</span><br />
+		<span id="dom_clone">复制[clone]操作</span>
+		
+		<ul id="shan">
+		  <li id="node_empty">这个是empty</li>
+		  <li id="node_remove">这个是remove</li>
+		  <li id="node_clone">这个是clone</li>
+		</ul>
+	</body>
+</html>
+<!--
+	empty:移除被选元素子节点和内容
+	remove:移除被选元素
+-->

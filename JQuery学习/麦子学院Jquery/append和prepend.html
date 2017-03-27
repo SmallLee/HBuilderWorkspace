@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#dom_add").click(function(){
+					$("#fabao ul").append("<li>没有第四个</li>")
+				});
+				$("#dom_pre_add").click(function(){
+					$("#fabao ul").prepend("<li>没有第四个</li>")
+				});
+				$("#dom_to_add").click(function(){
+					$("<h1>标题</h1>").appendTo("#fabao");
+				});
+				$("#dom_pre_add").click(function(){
+					$("#fabao ul").prepend("<li>没有第四个</li>")
+				}); 
+			});
+		</script>
+		<style>
+			span{
+				border: 1px solid orange;
+			}
+		</style>
+	</head>
+	<body>
+		<label for="">文档操作展示：</label><br />
+			<span id="dom_add">追加[append][后面追加]</span><br />
+			<span id="dom_pre_add">追加[prepend][前面追加]</span><br />
+			<span id="dom_to_add">追加到[append]To[后面追加]</span><br />
+			<span id="dom_pre_add">追加到[prependTo][前面追加]</span>
+			<div id="fabao">
+			<ul>
+			<li>追妹子的三大法宝：</li>
+			<li>坚持</li>
+			<li>不要脸</li>
+			<li>坚持不要脸</li>
+			</ul>
+			</div>
+	</body>
+</html>

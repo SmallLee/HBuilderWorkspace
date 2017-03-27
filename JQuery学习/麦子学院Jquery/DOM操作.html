@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#get").click(function(){
+					//../img/icon_weixin.jpg
+					alert($("#img").attr("src"));
+				});
+				$("#modify").click(function(){
+					$("#img").attr("src","");
+				});
+				$("#delete").click(function(){
+					$("img").removeAttr("src")
+				});
+			});
+		</script>
+		<style type="text/css">
+			span{
+				border: 1px solid orange;
+			}
+		</style>
+	</head>
+	<body>
+		<hr />
+		<label for="">属性操作:</label>
+		<span id="get">获取属性</span>
+		<span id="modify">修改属性</span>
+		<span id="delete">删除属性</span><br />
+		<img src="../img/icon_weixin.jpg" alt="" id="img"/>
+	</body>
+</html>

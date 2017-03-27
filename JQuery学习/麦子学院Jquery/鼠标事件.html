@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<title></title>
+		<script type="text/javascript">
+			$(function(){
+				$("#ip1").click(function(){
+					alert("点击了");
+				});
+				$("#ip1").hover(function(){
+					alert("悬浮");
+				});
+				//失去焦点事件
+				$("#ip2").blur(function(){
+					alert("blur事件");
+				});
+				//获得焦点事件
+				$("#ip2").focus(function(){
+					alert("focus事件");
+				});
+			});
+		</script>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<label for="ip1">姓名</label><input type="text" id="ip1" />
+		<label for="ip2">年龄</label><input type="text" id="ip2" />
+	</body>
+</html>

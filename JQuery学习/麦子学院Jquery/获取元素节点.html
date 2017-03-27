@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<title></title>
+		<script type="text/javascript">
+			$(function(){
+				$("#node_html").click(function(){
+					alert($("#get_html").html());
+				});
+				$("#node_text").click(function(){
+					alert($("#get_text").text());
+				});
+				$("#node_val").click(function(){
+					alert($("#getVal").val());
+				});
+			});
+		</script>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<label for="">节点内容的获取</label>
+		<span id="node_html">html</span>
+		<span id="node_text">text</span>
+		<span id="node_val">value</span>
+		<div id="node_get">
+			<div id="get_html"><h4>h4标题</h4></div>
+			<div id="get_text"><h2>h2标题</h2></div>
+			<input type="text" value="123" id="getVal" />
+		</div>
+	</body>
+</html>

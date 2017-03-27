@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<title></title>
+		<script>
+			$(function(){
+				$("#inputName").keydown(function(){
+					$("#target").text($(this).val());
+				});
+				$("#inputName1").keypress(function(){
+					$("#target").text($(this).val());
+				});
+				$("#inputName2").keyup(function(){
+					$("#target").text($(this).val());
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<input type="text" placeholder="请输入用户名" id="inputName"/><br />
+		<input type="text" placeholder="请输入用户名" id="inputName1"/><br />
+		<input type="text" placeholder="请输入用户名" id="inputName2"/><br />
+		显示效果：<span id="target"></span>
+	</body>
+</html>
+<!--
+	Keydown与keypress有一定的滞后性，而keyup我们输入多少则显示多少，
+	所以推荐大家使用keyup作为我们后台进行验证的时候，才能把数据一模一样的传递过去。
+-->

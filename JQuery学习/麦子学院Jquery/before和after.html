@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#dom_after").click(function(){
+					//给最后一个li后面添加
+					$("li:last-child").after("<li>可以</li>")
+				});
+				$("#dom_before").click(function(){
+					//给最后一个li后面添加
+					$("ul").before("<li>你好</li>")
+				});
+				$("#dom_insert_after").click(function(){
+					//给最后一个li后面添加
+					$("<li>可以</li>").insertAfter("ul")
+				});
+				$("#dom_insert_before").click(function(){
+					//给最后一个li后面添加
+					$("<li>你好</li>").insertBefore("ul");
+				});
+			});
+		</script>
+		<style type="text/css">
+			span{
+				border: 1px solid orange;
+			}
+		</style>
+	</head>
+	<body>
+		<span id="dom_after">追加[after][后面追加]</span>
+			<span id="dom_before">追加[beforer][前面追加]</span>
+			<span id="dom_insert_after">追加到[insert after][后面追加]</span>
+			<span id="dom_insert_before">追加到[insert before][前面追加]</span>
+			
+			<div id="gongzi">
+			  <ul>
+			    <li>老板？</li>
+			    <li>涨工资吗？</li>
+			  </ul>
+			</div>
+	</body>
+</html>
