@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<script>
+			$(function(){
+				$("#check_username").click(function(){
+					var name = $("#t_username").val();
+					var ret = /^[a-zA-Z][a-zA-Z0-9]{5,20}$/;
+					if(ret.test(name)){
+						alert('ok');
+					} else {
+						alert('wrong');
+					}
+				});
+				  $("#check_email").click(function(){
+		            var str = $("#t_email").val();
+		            var ret = /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/;
+		            if(ret.test(str)){
+		                alert('ok');
+		            }else{
+		                alert('wrong');
+		            }
+       			 });
+       			    // 手机
+		        $("#check_phone").click(function(){
+		            var str = $("#t_phone").val();
+		            var ret = /^[\d]{5,20}$/;
+		            if(ret.test(str)){
+		                alert('ok');
+		            }else{
+		                alert('wrong');
+		            }
+		        });
+			});
+		</script>
+	</head>
+	<body>
+		<form action="">
+	    <label>用户名：</label><span id="check_username">检测</span>
+	    <input type="text" id="t_username" placeholder="请输入"/>
+	    <hr/>
+	    <label>邮箱：</label><span id="check_email">检测</span>
+	    <input type="text" id="t_email" placeholder="请输入"/>
+	    <hr/>
+	    <label>手机：</label><span id="check_phone">检测</span>
+	    <input type="text" id="t_phone" placeholder="请输入"/>
+	    <hr/>
+</form>
+	</body>
+</html>

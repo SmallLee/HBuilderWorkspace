@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<script>
+			$(function(){
+				$("p").click(function(){
+					$("#content").load("ID选择器.html")
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p>我需要阳光</p>
+		<div id="content">
+			
+		</div>
+	</body>
+</html>
+<!--
+	载入远程HTML文件代码并插入至DOM中（可理解为加载远程文件），
+	load默认传输方式是get方式，传递附加参数时自动转换为post方式
+-->

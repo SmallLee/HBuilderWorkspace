@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<script>
+			$(function(){
+				$("#btn").click(function(){
+					var name = $("#username").val();
+					var url = "../js/ajax.json";
+					var data = {username:name};
+					$.ajax({
+						//请求类型
+						type:"get",
+						//请求的url
+						url:url,
+						//发送到服务器的类型
+						data:data,
+						//服务器响应的数据类型
+						dataType:'json',
+						//是否是异步处理
+						async:true,
+						success:function(msg){
+							$("#result").text(msg.name);
+						},
+						error:function(msg){
+							$("#result").text("failed");
+						},
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<label for="">ajax跨域方式验证用户名</label>
+		<input type="text" id="username" placeholder="请输入用户名" />
+		<p id="result">获取的信息展示在这里</p>
+		<span id="btn">点击获取</span>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+*{
+				margin: 0px;
+				padding: 0px;
+			}
+			body{
+				text-align: center;
+			}
+			.button_t{
+				padding: 10px;
+			}
+			.button_t span{
+				margin: 0px 8px;
+				padding: 0px 10px;
+				border: 2px solid orange;
+				cursor: pointer;
+			}
+			.main{
+				background: #00ffff;
+			}

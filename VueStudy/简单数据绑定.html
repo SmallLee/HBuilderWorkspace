@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="utf-8" />
 		<title></title>
-		<script src="js/vue.min.js"></script>
+		<script src="js/vue.js"></script>
 	</head>
 	<body>
 		<div id="app">
-			<p v-html='message'></p>
 			<p>{{message}}</p>
 		</div>
 	</body>
-	<script type="text/javascript">
+	<script>
 		new Vue({
 			el:"#app",
-			data:{
-				message:'Nihaoma'
+			data:{ 
+			message:"Hello Vue.js"
 			}
 		});
 	</script>
 </html>
+<!--
+	数据绑定，采用{{}}的形式｝
+	
+-->

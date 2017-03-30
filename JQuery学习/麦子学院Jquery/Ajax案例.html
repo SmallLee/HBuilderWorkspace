@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<script>
+			$(function(){
+				$("#login_do").click(function(){
+					//显示登录界面
+					$(".d_login").toggleClass("login_display");
+					var height = $(window).height();
+					var width = $(window).width();
+					height = parseInt(height/2-150);
+					width = parseInt(width/2-100);
+					$(".d_login").css({left:width,top:height});
+				});
+				//ajax登录
+				$(".btn_login").click(function(){
+					var url = '../js/ajax.json';
+					var data = $("#myform").serialize();
+					$.post(url,data,function(msg){
+						if(msg.code==0) {
+							$(".top_nav").html("<span>欢迎您</span>"+msg.name)
+							$(".d_login").hide();
+						}else{
+							alert("登录失败");
+						}
+					})
+				});
+			});
+		</script>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			body{
+				text-align: center;
+			}
+			li{
+				list-style: none;
+				cursor: pointer;
+			}
+			.top_nav{
+				height: 30px;
+				width: 100%;
+				background-color: #004444;
+			}
+			.top_nav span{
+				cursor: pointer;
+				color: white;
+				float: right;
+				height: 30px;
+				line-height: 30px;
+				margin: 0px 10px;
+			}
+			.top_nav a{
+				color: white;
+				text-decoration: none;
+			}
+			.d_login{
+				width: 300px;
+				height: 200px;
+				border-radius: 5px;
+				background: orange;
+				display: none;
+			}
+			.d_login ul{
+				padding-top: 60px;
+			}
+			.login_display{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+    <!-- 模拟网站的顶部代码 -->
+		    <div class="top_nav">
+		        <span id="register_do">注册</span>
+		        <span id="login_do">登录</span>
+		        <span><a href="http://www.baidu.com">首页</a></span>
+		    </div>
+		</div>
+		<div class="d_login">
+			<form id="myform">
+				<ul>
+					<li>
+						<label for="username">用户名</label>
+						<input type="text" id="username" placeholder="请输入用户名"/>
+					</li>
+					<li>
+						<label for="">密码</label>
+						<input type="password" id="password" placeholder="请输入密码" />
+					</li>
+					<li><input type="button" value="登录" class="btn_login"/></li>
+				</ul>
+			</form>
+		</div>
+	</body>
+</html>

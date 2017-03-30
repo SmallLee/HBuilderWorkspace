@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<!--完整语法-->
+			<button v-on:click="greet">Hello</button>
+			<!--缩写-->
+			<button @click="what('ac')">Hello</button> 
+			
+			<a href="https://www.baidu.com" @click="jump(test,$event)">百度一下</a>
+		</div>
+		<script>
+			new Vue({
+				el:"#app",
+				data:{
+					test:"阻止链接跳转"
+				},
+				methods:{
+					greet:function(e){
+						//hello[object HTMLButtonElement]
+						alert('hello'+e.target);
+					},
+					//ar为传过来的参数
+					what:function(ar){
+						alert(ar)
+					},
+					jump:function(test,e){
+						e.preventDefault();
+						alert(test);
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
+<!--
+	阻止链接跳转：可以用$event当作参数传过去
+	
+-->

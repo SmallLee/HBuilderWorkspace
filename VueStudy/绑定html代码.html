@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<p v-html='result'></p>
+			<p>{{message}}</p>
+		</div>
+	</body>
+	<script type="text/javascript">
+		new Vue({
+			el:"#app",
+			data:{
+				message:'Nihaoma',
+				result:"<h2>h2标题</h2>"
+			}
+		});
+	</script>
+</html>
+<!--
+	v-html用于输出html代码
+	
+-->

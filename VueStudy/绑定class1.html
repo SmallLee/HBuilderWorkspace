@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js"></script>
+		<style type="text/css">
+			.class-a{
+				background: black;
+				color:#fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<label for="cb">修改颜色</label><input type="checkbox" id="cb" v-model='isA'/>
+			<br />
+			<!--如果表达式isA的值为true，则使用class-a样式-->
+			<div v-bind:class="{'class-a':isA}">
+				绑定样式
+			</div>
+		</div> 
+	</body>
+	<script>
+		new Vue({
+			el:"#app",
+			data:{
+				isA:false
+			}
+		});
+	</script>
+</html>
+<!--
+	id不建议绑定在html和body上
+	
+-->

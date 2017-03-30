@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<script>
+			$(function(){
+				$("#t_animate").click(function(){
+					$("#img").animate({
+						height:'300px',opacity:'0.5'
+					},2000)
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+            <span id="t_animate">动画</span>
+        </div>
+        <div>
+            <img src="../img/icon_weixin.jpg" id="img"/>
+        </div>
+        <div></div>
+	</body>
+</html>
+<!--
+	animate方法接受的第一个参数为一个对象
+	第二个参数为时间
+	
+-->

@@ -1,11 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="a" ng-controller="c">
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		
+		<script src="js/angular.min.js"></script>
+		<style type="text/css">
+			li{
+				list-style: none;
+			}
+		</style>
 	</head>
 	<body>
-		<h1>AngularJS</h1>
+		<ul>
+			<li ng-repeat="usertitle in useTitleList">
+				<label for="">{{usertitle.username}}</label><br />
+				<h4>{{usertitle.title}}</h4>
+				<label for="">{{usertitle.time}}</label><br />
+				<span>{{usertitle.count}}</span>
+				<like content="usertitle"></like><br />
+				<ul>
+					<li ng-repeat="likelist in usertitle.likeList">
+						<span>{{likelist.Text}}</span>
+					</li>
+				</ul>
+			</li>
+		</ul>
 	</body>
+	<script type="text/javascript">
+		var app = angular.module('a',[]);
+		app.controller('c',function($scope){
+			$scope.useTitleList = [
+			{username:'Mike',title:'今天天气不错',time:'2017-3-28',count:0,likeList:[]},
+			{username:'Jack',title:'今天下雨',time:'2017-3-25',count:0,likeList:[]},
+			{username:'Tony',title:'今天有风',time:'2017-3-23',count:0,likeList:[]}
+			];
+			});
+			app.directive("like",function(){
+				return {
+					restrict:'AE',
+					template:"<button ng-click='Like()'>赞</button>",
+					scope:{
+						content:"="
+					},
+					link:function($scope,element){
+						$scope.Like = function(){
+							$scope.content.count += 1;
+							$scope.content.likeList.push({Text:'HH点赞了'});
+						}
+					}
+					}
+			});
+	</script>
 </html>

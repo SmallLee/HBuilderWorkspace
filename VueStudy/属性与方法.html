@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			{{a}}
+			<button @click="get">获取a的值</button>
+		</div>
+		<script>
+			//data必须放在上面，因为script中的代码是从上往下执行的
+			var data = {a:1};
+			var vm = new Vue({
+				el:"#app",
+				data:data,
+				methods:{
+					get:function(){
+						data.a = 2;
+//						alert(this.a)//a
+//						this.a =3;
+//						alert(data['a'])//3
+//						alert(this.$data==data);
+//						alert(this.$el == document.getElementById("app"))
+					}
+				}
+			});
+//			vm.a = 30;
+////			alert(vm.$data==data) //true
+			//这个回调将在vm.a改变后
+			vm.$watch('a',function(newVal,oldVal){
+				alert(vm.a);
+			})
+		</script>
+	</body>
+</html>
+<!--
+	每个 Vue 实例都会代理其 data 对象里所有的属性：
+-->
+	

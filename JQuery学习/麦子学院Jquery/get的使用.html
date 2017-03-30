@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#getMsg").click(function(){
+					var phoneV = $("#phone").val();
+					var url = '../js/ajax.json';
+					 var data = {phone:phoneV};
+					 $.get(url,data,function(msg){
+					 	if(msg.code==0){
+					 		$("#result").text(msg.name)
+					 	} else {
+					 		alert("出错了");
+					 	}
+					 });
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<label for="">get方式获取手机号</label>
+		<input type="number" id="phone" placeholder="请输入手机号码" /><br/>
+		<span id="getMsg">点击获取</span>
+		<p id="result">获取的信息展示在这里</p>
+	</body>
+</html>
+<!--
+	get函数格式：
+	$.get(URL,data,function(data,status,xhr),dataType)
+	URL:必需，需要请求的url
+	data:可选，连同请求发送到服务器的数据
+	function(data,status,xhr):
+	data:服务器返回的数据
+	status:请求的状态
+	xhr - 包含 XMLHttpRequest 对象
+	dataType:
+	可选。规定预期的服务器响应的数据类型。
+	默认地，jQuery 会智能判断
+	
+-->

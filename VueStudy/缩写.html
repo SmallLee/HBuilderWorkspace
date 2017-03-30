@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<a v-bind:href="url">百度一下</a>
+			<!--缩写-->
+			<a :href="url">百度一下</a>
+			<button v-on:click="show(2)">弹出</button>
+			<button @click="show">弹出</button>
+		</div>
+		<script>
+			new Vue({
+				el:"#app",
+				data:{
+					url:"https://www.baidu.com"
+				},
+				methods:{
+					show:function(msg){
+						alert('show'+msg)
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
+<!--
+	事件函数默认都有个ev参数
+-->
