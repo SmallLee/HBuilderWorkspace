@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/*子元素选择器，只会选择直接子元素*/
+			#parent >span{
+				border: 1px solid orange;
+			}
+			p{
+				/*!import设置为最高权值*/
+				color: orange!important;
+			}
+			#ph{
+				color: blue;
+			}
+			#content{
+				/**/
+				line-height: 2em;
+			}
+			span{
+				/*设置文字,字母之间的间隔*/
+				letter-spacing: 10px;
+				/*设置单词之间的间距*/
+				word-spacing: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--address显示地址信息，显示为斜体-->
+		<address>北京市朝阳区东湖渠叶青大厦D座</address>
+		<!--code显示一行代码-->
+		<code>int a = 3</code>
+		<!--pre标签显示多行代码-->
+		<pre>
+			var i = 3;
+			i = i +3;
+			document.write(i)
+		</pre>
+		<!--mailto链接邮箱，subject是主题，body是内容-->
+		<a href="mailto:1615404043@qq.com?subject='你好'&body='内容'">QQ邮箱</a>
+		<!--下拉列表框,multiple指定多选-->
+		<select name="hoby" multiple>
+			<option value="game">打游戏</option>
+			<!--默认选中上网-->
+			<option value="net" selected>上网</option>
+			<option value="song">听歌</option>
+		</select>
+		<hr />
+		<!--引入CSS方式
+			1.内联式
+			2.嵌入式
+			2.外部式
+			
+			优先级：内联式最高，嵌入式和外部式根据书写顺序，谁在后面优先级就高，
+			总的来说就是就近原则，
+			上面的优先级有一个前提，就是CSS样式是在相同的权值下
+		-->
+		<!--子元素选择器-->
+		<div id="parent">
+			<span>
+				儿子
+				<span>孙子</span>
+			</span>
+		</div>
+		<hr />
+		<!--
+			继承：某些样式是具有继承性的
+			为p标签设置color后，其子元素也会变为红色
+			border属性是无法继承的
+			
+			选择器权值：
+			1.标签为1
+			2.class为10
+			3.id为100
+			4.继承权值最低
+		-->
+		<p id="ph">打算fid发挥农村中学那位日欧第三方斯蒂芬</p>
+		<hr />
+		<p id="content">菲茨杰拉德，二十世纪美国文学巨擘之一，兼具作家和编剧双重身份。他以诗
+			人的敏感和戏剧家的想象为"爵士乐时代"吟唱华丽挽歌，
+			其诗人和梦想家的气质亦为那个奢靡年代的不二注解</p>
+		<span>HelloWorld你好世界</span><br />
+		<span>I LOVE YOU</span>
+		<hr />
+		<!--
+			CSS3种布局模型：
+			1.流动模型
+			2.浮动模型
+			3.层模型
+			
+		流动模型：默认的网页布局模型，具有两个特点：
+		1.块级元素从上往下排列
+		2.内联元素从左向右排列
+		层模型有三种形式：
+		1.绝对定位
+		2.相对定位
+		3.固定定位
+		-->
+	</body>
+</html>
