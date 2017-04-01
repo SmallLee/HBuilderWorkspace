@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#container{
+				width: 200px;
+				background: orange;
+				/*水平居中*/
+				text-align: center;
+			}
+			#content{
+				/*行高设置为父元素高度，实现垂直居中*/
+				line-height: 50px;
+				height: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<span id="content">我是单行文本地方都是分地方法</span>
+		</div>
+	</body>
+</html>
+<!--
+	line-height:行与行之间基线的高度
+	父元素高度确定的单行文本：
+	子元素设置line-height为父元素高度
+	
+-->

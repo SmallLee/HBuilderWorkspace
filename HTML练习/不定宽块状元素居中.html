@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#bdk{
+				background: orange;
+			}
+			#bdk2{
+				background: green;
+				display: inline;
+				text-align: center;
+			}
+			.container{
+				text-align: center;
+			}
+			#parent{
+				float: left;
+				position: relative;
+				left: 50%;
+				background: gray;
+			}
+			#bdk3{
+				background: pink;
+				position: relative;
+				left: -50%;
+			}
+		</style>
+	</head>
+	<body>
+		<table style="margin: auto;">
+				<tr><td>
+				<div id="bdk">我是不定宽块状元素</div>
+				</td></tr>
+		</table>
+		<hr />
+		<div class="container">
+			<div id="bdk2">我是不定宽块状元素</div>
+		</div>
+		<hr />
+		<div id="parent">
+			<div id="bdk3">我是不定宽块状元素</div>
+		</div>
+	</body>
+</html>
+<!--
+	方式一：
+	tbody标签如果你不写的话，浏览器默认会加上
+	给不定宽块状元素外面加上table标签，包括tr,td
+	方式二：
+	设置display:inlie变为行内元素，然后设置父元素text-align
+	方式三：
+	父元素设置float:left,相对定位，向左偏移50%
+	子元素设置相对定位，向左偏移-50%
+-->

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			td{
+				height: 300px;
+				background: orange;
+				width: 400px;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tbody>
+				<tr><td>
+					<div id="container">
+						<p>多行文本</p>
+						<p>多行文本</p>
+						<p>多行文本</p>
+						<p>多行文本</p>
+				</div>
+				</td></tr>
+			</tbody>
+		</table>
+	</body>
+</html>
+<!--
+	父元素高度确定的多行文本：
+	使用table(包括tbody,tr,td标签)，同时设置vertical-align为middle
+	因为td默认设置了vertical-align为middle，所以这里不用显示设置
+-->
