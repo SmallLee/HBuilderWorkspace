@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.checkbox{
+				border: 2px solid transparent;
+				box-shadow: inset 0 1px,inset,1px 0,inset -1px 0,inset 0 -1px; 
+				background-color: #fff;
+				background-clip: content-box;
+				color: #d0d0d5;
+				width: 19px;height: 19px;
+			}
+			/*实现等高布局*/
+			.box{
+				border-left: 300px solid orange;
+				background: green;
+			}
+			.left{
+				float: left;
+				margin-left: -300px;
+				width: 300px;
+			}
+			h3{
+				margin: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="checkbox">
+			
+		</div>
+		<div class="box">
+			<nav class="left">
+				<h3>导航1</h3>
+			</nav>
+			<section>
+				<div class="module"><h3>模块1</h3></div>
+			</section>
+		</div>
+	</body>
+</html>
+<!--
+	box-shadow:h-shadow v-shadow blur spread color inset
+	background-clip；规定背景的绘制区域
+		border-box:背景被裁剪到边框盒
+		padding-box:背景裁剪到内边距
+		content-box:背景裁剪到内容区域
+-->
