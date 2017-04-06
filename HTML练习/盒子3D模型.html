@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			img{
+				width: 100px;
+				height: 100px;
+				border: 1px solid red;
+			}
+			.book{
+				background: orange;
+			}
+			.content{
+				border: 4px solid blue;
+				padding: 40px 20px;
+			}
+			#footer{
+				width: 100%;height: 100px;
+				border: 2px solid purple;
+			}
+			#header{
+				width: 100%;height: 100px;
+				border: 2px solid pink;
+			}
+			#container{
+				width: 700px;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<!--头-->
+			<div id="header"></div>
+			<div id="main">
+				<div class="book content">
+					<img src="img/icon_weixin.jpg" />
+					<img src="img/icon_weixin.jpg" alt="" />
+					<img src="img/icon_weixin.jpg" alt="" />
+				</div>
+			</div>
+			<div id="footer"></div>
+		</div>
+	</body>
+</html>
+<!--
+	class = "style1 style2"表示使用两个样式的并集
+	CSS:盒子3D模型
+
+从上到下分为5层
+
+1、border
+
+2、content+padding
+
+3、background-image
+
+4、background-color
+
+5、margin
+
+如果想让页面自动居中，当设置marign属性为auto的时候，不能再设置浮动或者绝对定位
+	
+-->
