@@ -5,6 +5,9 @@ html,body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,input,span{
 body{
 	font:12px/1.5em "宋体",arial;
 	color:#3c3c3c;
+	background: url(../img/img.jpg) center top;
+	width: 1366;
+	height: 680;
 }
 h1,h2,h3,h4,h5,h6{
 	/*让h标题和body字体一样大*/
@@ -31,4 +34,21 @@ a:hover{
 	height: 0;
 	visibility: hidden;
 	clear: both;
+}
+.clearfix{
+	/*兼容ie6*/
+	zoom: 1;
+}
+#header{
+	width: 975px;
+	height: 99px;
+	background: pink;
+	margin: 0 auto;
+	padding: 20px 0 0 5px;
+
+}
+.logo{
+	width: 200px; 
+	height: 69px;
+	background: url(../img/logo.png);
 }
