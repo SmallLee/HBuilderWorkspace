@@ -6,7 +6,7 @@ body{
 	font:12px/1.5em "宋体",arial;
 	color:#3c3c3c;
 	background: url(../img/img.jpg) center top;
-	width: 1366;
+	width: 980;
 	height: 680;
 }
 h1,h2,h3,h4,h5,h6{
@@ -51,4 +51,57 @@ a:hover{
 	width: 200px; 
 	height: 69px;
 	background: url(../img/logo.png);
+	text-indent: -9999em;
+}
+.logo a{
+	height: 69px;
+	/*a是内联元素，需要设置为block才能设置高度*/
+	display: block;
+}
+/*.logo{
+	padding-top: 69px;
+	height: 0;
+	width: 200px;
+	background: url(../img/logo.png);
+	overflow: hidden;
+}*/
+#nav{
+	height: 60px;
+	margin: 0 auto;
+	width: 975px;
+}
+.nav-bd{
+	height: 45px;
+	background: grey;
+}
+.shadow{
+	height: 15px;
+	background: green;
+}
+.nav-left,.nav-right{
+	width: 30px;
+	height: 45px;
+	background: blue;
+	float: left;
+}
+.nav-right{
+	float: right;
+}
+.nav-bd ul{
+	width: 915px;
+	background: orange;
+	height: 45px;
+	float: left;
+	text-align: center;
+}
+.nav-bd ul a{
+	font-size: 14px;
+	font-weight: bold;
+}
+.nav-bd ul li{
+	float: left;
+	line-height: 45px;
+	height: 45px;
+	padding: 0 48px;
+	background: url(../img/li-bg.png) no-repeat;
 }
